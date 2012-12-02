@@ -1,0 +1,117 @@
+<style type="text/css">
+	.demo-body{padding-top:20px;}
+</style>
+<div class="demo-body">
+    <div id="test" class="multipleBox">            
+        <div class="multiple">
+            <div class="multiple-item">
+                <span class="icon-layout ellipsis">图标文字以及工具按钮1</span>
+            </div>
+            <div class="multiple-item">
+                <span class="icon-layout ellipsis">图标文字以及工具按钮2</span>
+            </div>
+            <div class="multiple-item">
+                <span class="icon-layout ellipsis">图标文字以及工具按钮3</span>
+            </div>
+            <div class="multiple-item">
+                <span class="icon-layout ellipsis">图标文字以及工具按钮4</span>
+            </div>
+            <div class="multiple-item">
+                <span class="icon-layout ellipsis">图标文字以及工具按钮5</span>
+            </div>
+        </div>                
+        <div class="multipleBtnBox">
+        	<a id="move-right"></a>
+        	<a id="move-all-right"></a>
+        	<a id="move-left"></a>
+        	<a id="move-all-left"></a>
+        	<a id="move-up"></a>
+        	<a id="move-down"></a>
+        </div>                
+        <div class="multiple">
+            <div class="multiple-item">
+                <span class="icon-layout ellipsis">图标文字以及工具按钮6</span>
+            </div>
+            <div class="multiple-item">
+                <span class="icon-layout ellipsis">图标文字以及工具按钮7</span>
+            </div>
+            <div class="multiple-item">
+                <span class="icon-layout ellipsis">图标文字以及工具按钮8</span>
+            </div>
+            <div class="multiple-item">
+                <span class="icon-layout ellipsis">图标文字以及工具按钮9</span>
+            </div>
+            <div class="multiple-item">
+                <span class="icon-layout ellipsis">图标文字以及工具按钮10</span>
+            </div>
+        </div>            
+    </div>
+</div>
+<script type="text/javascript">
+	var mul=$('.multiple');
+	mul.fitParent({wh:'height'});
+	if($.jsc.is('ie6')){
+		mul.width(mul.width()-20).css({'padding-right':mul.padding('right')+20,'overflowX':'hidden'});
+	}
+	var t=$('#test').draggable({type:'select',selector:'.multiple',cursor:''})
+	.button({
+		cls:'',
+		toolbarCls:'',
+		toggleCls:[{cls:'',hover:'',press:''}],
+		iconCls:'',
+		iconOnly:'',
+		cursor:'default',
+		selector:'.multiple>.multiple-item',
+		click:function(jsc){
+			if(jsc.event.shiftKey){
+				jsc.button.addClass('select-selected');
+			}else{
+				jsc.button.addClass('select-selected').siblings('.select-selected').removeClass('select-selected');
+			}
+			return false;
+		}
+	}).button({selector:'.multiple',cls:'',toggleCls:[{cls:'',hover:'',press:''}],iconCls:'',
+		iconOnly:'',
+		toolbarCls:'',
+		cursor:'default',
+		click:function(jsc){
+			jsc.button.children('.select-selected').removeClass('select-selected');
+		}
+	}).draggable({type:'drag',proxy:false,keepPos:false,container:'#test',selector:'.select-selected',target:'.select-selected'});
+	$('.multiple').droppable({placeholder:true});
+	
+	$('#move-right').button({iconCls:'icon-right',icon:'icon-move-right',text:'选择',click:function(){
+		$(mul[0]).find('.select-selected').appendTo(mul[1]);
+	}});
+	$('#move-all-right').button({iconCls:'icon-right',icon:'icon-move-all-right',text:'全选',click:function(){
+		$(mul[0]).children().appendTo(mul[1]);
+	}});
+	$('#move-left').button({icon:'icon-move-left',text:'删除',click:function(){
+		$(mul[1]).find('.select-selected').appendTo(mul[0]);
+	}});
+	$('#move-all-left').button({icon:'icon-move-all-left',text:'全删',click:function(){
+		$(mul[1]).children().appendTo(mul[0]);
+	}});
+	$('#move-up').button({icon:'icon-move-up',text:'上移',click:function(){
+		var $c=$(mul[1]),sel=$c.find('.select-selected');
+		if(sel.length){
+			var index=$(sel[0]).index();
+			if(index>0){
+				$c.children(':eq('+(index-1)+')').before(sel);
+			}else{
+				$c.prepend(sel);
+			}
+		}
+	}});
+	$('#move-down').button({icon:'icon-move-down',text:'下移',click:function(){
+		var $c=$(mul[1]),sel=$c.find('.select-selected');
+		if(sel.length){
+			var index=$(sel[sel.length-1]).index();
+			if(index<$c.children().length-1){
+				$c.children(':eq('+(index+1)+')').after(sel);
+			}else{
+				$c.append(sel);
+			}
+		}					
+	}});
+</script>

@@ -1,0 +1,44 @@
+<style type="text/css">
+	.demo-drag-box{position:relative;display:inline-block;width:auto;margin:20px 50px 20px 0;vertical-align:middle;width:500px;height:300px;border:1px dashed #ccf;background:#efefef;}
+	.demo-drag-box{*display:inline;}
+	.demo-drag{border:1px solid #89b;background:#bce;width:100px;height:100px;margin-left:10px;}
+	.demo-drag .handle{display:block;background:#99f;height:30px;line-height:30px;text-align:center;color:#fff;}
+</style>
+<div class="demo-body">
+	
+	<div class="demo-drag-box">
+		<h4>basic</h4>
+		<div id="drag01" class="demo-drag"></div>
+	</div>
+	<div class="demo-drag-box">
+		<h4>proxy</h4>
+		<div id="drag02" class="demo-drag"></div>
+	</div>
+	<div id="demo-drag-box-01" class="demo-drag-box">
+		<h4>contain</h4>
+		<div id="drag03" class="demo-drag"></div>
+	</div>
+	<div id="demo-drag-box-02" class="demo-drag-box" style="background:url(demo/images/bg_grad.jpg) repeat;">
+		<h4>grid</h4>
+		<div id="drag04" class="demo-drag" style="position:absolute;top:40px;left:40px;margin-left:0;"></div>
+	</div>
+	<div class="demo-drag-box">
+		<h4>handle</h4>
+		<div id="drag05" class="demo-drag"><span class="handle">handle</span></div>
+	</div>
+	<div class="demo-drag-box">
+		<h4>axis</h4>
+		<div id="drag06" class="demo-drag"></div>
+		<div id="drag07" class="demo-drag"></div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+	$('#drag01').draggable({type:'drag',proxy:false});
+	$('#drag02').draggable({type:'drag',proxy:true});
+	$('#drag03').draggable({type:'drag',proxy:false,container:'#demo-drag-box-01'});
+	$('#drag04').draggable({type:'drag',proxy:false,container:'#demo-drag-box-02',step:20});
+	$('#drag05').draggable({type:'drag',proxy:false,handle:'>.handle'});
+	$('#drag06').draggable({type:'drag',proxy:false,axis:'x'});
+	$('#drag07').draggable({type:'drag',proxy:false,axis:'y'});
+</script>

@@ -1,0 +1,88 @@
+<style type="text/css">
+	.demo-accordion-box{display:inline-block;width:300px;height:300px;margin:20px 40px 0 0;vertical-align:top;}
+	.demo-accordion-box{*display:inline;}
+	.demo-accordion-box .spin-show .scroll-view{margin:10px 0;}
+</style>
+<div class="demo-body">
+	
+    <div class="demo-accordion-box">
+        <div id="accordion01">                
+			<a class="accordion-header">
+				<span class="icon-layout">栏目名栏目名</span>
+			</a>
+                <div class="accordion-body">1.内容。</div>
+                
+			<a class="accordion-header">
+				<span class="icon-layout">栏目名栏目名</span>
+			</a>
+                <div class="accordion-body">2.内容。</div>                    
+			<a class="accordion-header">
+				<span class="icon-layout">栏目名栏目名</span>
+			</a>
+                <div class="accordion-body">3.内容。</div>        
+			<a class="accordion-header">
+				<span class="icon-layout">栏目名栏目名</span>
+			</a>
+                <div class="accordion-body">4.内容。</div>
+        </div>
+    </div>
+	
+    <div id="demo-accordion-box02" class="demo-accordion-box">
+        <div id="accordion02">                
+			<a class="accordion-header">
+				<span class="icon-layout">栏目名栏目名</span>
+			</a>
+                <div class="accordion-body">1.内容。</div>
+                
+			<a class="accordion-header">
+				<span class="icon-layout">栏目名栏目名</span>
+			</a>
+                <div class="accordion-body">2.内容。</div>                    
+			<a class="accordion-header">
+				<span class="icon-layout">栏目名栏目名</span>
+			</a>
+                <div class="accordion-body">3.内容。</div>        
+			<a class="accordion-header">
+				<span class="icon-layout">栏目名栏目名</span>
+			</a>
+                <div class="accordion-body">4.内容。</div>
+        </div>
+    </div>
+	
+    <div class="demo-accordion-box">
+        <div id="accordion03">                
+			<a class="accordion-header">
+				<span class="icon-layout">栏目名栏目名</span>
+			</a>
+                <div class="accordion-body">1.内容。</div>
+                
+			<a class="accordion-header">
+				<span class="icon-layout">栏目名栏目名</span>
+			</a>
+                <div class="accordion-body">2.内容。</div>                    
+			<a class="accordion-header">
+				<span class="icon-layout">栏目名栏目名</span>
+			</a>
+                <div class="accordion-body">3.内容。</div>        
+			<a class="accordion-header">
+				<span class="icon-layout">栏目名栏目名</span>
+			</a>
+                <div class="accordion-body">4.内容。</div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+		$('#accordion01').accordion();
+
+		var accordion02=$('#accordion02').accordion({
+			icon:false,
+			tipIconPos:'icon-left',
+			tipIconCls:'icon-accordion-tip-left',
+			
+			//data:[{icon:'icon-layout',caption:'1',url:'accordion-ajax-data1.html',cache:true},{index:1,icon:'icon-user',caption:'2',url:'accordion-ajax-data.html',cache:true}]
+		});
+		$('#demo-accordion-box02').draggable({type:'resize',trigger:true});
+		$('#accordion03').accordion({icon:false,event:'mouseenter'});
+    });
+</script>

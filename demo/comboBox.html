@@ -1,0 +1,30 @@
+<style type="text/css">
+	.demo-spin-box{position:relative;display:inline-block;width:auto;margin:20px 50px 20px 0;vertical-align:middle;width:500px;height:300px;border:1px dashed #ccf;background:#efefef;}
+	.demo-spin-box{*display:inline;}
+</style>
+<div class="demo-body">
+	
+	<div class="demo-spin-box">
+		<h4>select multiple</h4>
+		<select name="comboBox1" multiple="multiple" style="width:150px;">
+			<optgroup label="直辖市">
+				<option value="1" selected="selected">北京</option>
+				<option value="2" selected="selected">上海</option>
+				<option value="3" selected="selected">天津</option>
+			</optgroup>
+			<option value="4">河北省</option>
+			<option value="5">山西省</option>
+			<option value="6">山东省</option>
+		</select>
+	</div>
+	<div class="demo-spin-box">
+		<h4>input&icon</h4>
+		<input id="combo" type="text" />
+	</div>
+	
+</div>
+<script type="text/javascript">
+	$('select').comboBox({width:100,onchange:function(){alert(arguments[0])}});
+	$('#combo').comboBox({iconCls:'combo-icon',data:[{text:'复制',cls:'icon-copy'},{text:'粘贴',cls:'icon-paste',selected:'selected'},{text:'撤销',cls:'icon-undo'}]});
+	$$.vml.addRule('.combo-icon');
+</script>

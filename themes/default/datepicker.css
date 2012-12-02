@@ -1,0 +1,85 @@
+/* author 王海洋 */
+@charset "utf-8";
+.datepicker{width:182px;min-height:100px;height:auto !important;height:100px;padding:2px;}
+.datepicker{border-radius:3px;box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);-webkit-box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);-moz-box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);}
+.datepicker .panel-week li{display:inline;float:left;width:20px;padding:3px;line-height:16px;text-align:center;font-weight:bold;}
+.datepicker .panel-day li{display:inline;float:left;width:20px;height:14px;margin:1px;padding:1px;line-height:14px;text-align:right;text-decoration:none;}
+.datepicker .panel-day li.selected{}
+.datepicker .panel-day li.hover{}
+
+.datepicker .datepicker-header{position:relative;z-index:100;height:16px;padding:2px;line-height:16px;font-size:12px;text-align:center;}
+.datepicker  a.dropdown-button{display:inline-block;position:static;width:15px;height:15px;overflow:hidden;cursor:pointer;vertical-align:middle;}
+.datepicker .spin-year, .datepicker .spin-month{position:relative;float:left;height:16px;width:76px;padding:0 2px;white-space:nowrap;}
+.datepicker .label-year, .datepicker .label-month{padding-left:4px;}
+.datepicker .spin-month{width:66px;}
+.datepicker  a.datebtn{position:absolute;top:0;display:block;width:16px;height:16px;cursor:pointer;}
+.datepicker  a.next-year, .datepicker  a.next-month{right:2px;}
+.datepicker  a.prev-year, .datepicker  a.prev-month{left:2px;}
+
+.datepicker .panel-dropdown .panel-dropdown-background{display:block;position:absolute;top:21px;left:-1px;z-index:10;width:182px;height:145px;}
+.datepicker .panel-dropdown .panel-dropdown-content{display:block;position:absolute;top:21px;left:-1px;z-index:11;width:182px;height:137px;padding:4px 0;text-align:center;}
+.datepicker .list-month{position:absolute;top:4px;left:0;width:50%;}
+.datepicker .list-year{position:absolute;top:4px;right:0;width:50%;}
+.datepicker .list-month li, .datepicker .list-year li{display:inline;float:left;width:32%;height:14px;padding:1px;margin:1px 6px;line-height:14px;text-align:center;}
+.datepicker .panel-dropdown a{display:block;}
+.datepicker .list-month li.hover, .datepicker .list-year li.hover{}
+.datepicker .list-month li.selected, .datepicker .list-year li.selected{padding:0px;}
+.datepicker .dToolbar{position:absolute;bottom:0;left:0;height:20px;width:182px;padding:4px 0;text-align:center;}
+.datepicker .dToolbar .btnBox{display:inline-block;width:auto;height:20px;padding-left:10px;}
+.datepicker .dToolbar .btnBox{*display:inline;}
+.datepicker .dToolbar .button{position:static;float:left;padding:0 4px;}
+.datepicker .yearBtnBar{bottom:24px;left:92px;width:90px;}
+.datepicker .yearBtnBar a.yearbtn{display:block;float:left;width:15px;height:15px;margin-right:10px;padding:0;overflow:hidden;cursor:pointer;}
+
+.datepicker .panel-time{height:18px;margin:2px 0;padding:1px 0 1px 1px;overflow:hidden;line-height:16px;}
+.datepicker .panel-time input{float:left;width:36px;width:34px\9;height:16px;padding-right:2px\9;margin-right:0;text-align:right;}
+.datepicker .panel-time span{display:inline-block;float:left;height:18px;padding:0 6px 0 5px;line-height:18px;*line-height:20px;overflow:hidden;vertical-align:middle;}
+.datepicker .panel-time .spin{float:left;width:36px;padding:0;overflow:hidden;}
+.datepicker .panel-time .spin-box{top:0;right:0;width:14px;margin:0;padding:0;}
+
+.datepicker .panel-control{position:relative;height:20px;margin-top:2px;}
+.datepicker .panel-range{position:absolute;left:2px;bottom:1px;width:96px;height:20px;padding-left:6px;}
+.datepicker .panel-range li{display:inline;float:left;width:40px;height:18px;margin-right:6px;cursor:pointer;line-height:18px;text-align:center;}
+.datepicker .panel-range li.selected{padding-top:1px;}
+
+.datepicker .button-ok{float:right;margin:1px 0 0;padding:0px 4px;}
+.datepicker .button-today{float:right;margin:1px 8px 0 0;padding:0px 4px;}
+.datepicker .button{}
+.datepicker .button-hover{}
+
+.date-input{display:inline-block;position:relative;height:20px;overflow:hidden;}
+.date-input input{display:inline-block;height:16px;margin:2px;padding:0;line-height:16px;vertical-align:top;}
+.date-input .icon-date{display:inline-block;width:16px;height:16px;margin:2px 1px 0 0;vertical-align:top;}
+
+/* skin default */
+.datepicker{border:1px solid #69c;background-color:#fffdef;color:#3455a0;}
+.datepicker .panel-week li{color:#3455a0;}
+.datepicker .panel-day li{border:1px solid #ccc;background-color:#d1dff0;color:#666;}
+.datepicker .panel-day li.selected{border:1px solid #ff7400;background-color:#ffbf40;color:#a64b00;}
+.datepicker .panel-day li.hover{border:1px solid #ff7400;background-color:#ffd073;color:#a64b00;}
+.datepicker .datepicker-header{border:1px solid #008585;background-color:#69c;color:#fff;}
+.datepicker  a.dropdown-button{background:url(images/icon-tool.png) 0 -1921px no-repeat;}
+.datepicker  a.datebtn{background-image:url(images/icon-tool.png);}
+.datepicker  a.next-year{background-position:0 -2040px;}
+.datepicker  a.prev-year{background-position:0 -1980px;}
+.datepicker  a.next-month{background-position:0 -2160px;}
+.datepicker  a.prev-month{background-position:0 -2100px;}
+.datepicker .panel-dropdown .panel-dropdown-background{background-color:#ccc;filter:alpha(opacity=90) gray;opacity:0.9;}
+.datepicker .list-month{border-right:1px solid #999;}
+.datepicker .list-month li, .datepicker .list-year li{color:#3455a0;}
+.datepicker .list-month li.hover, .datepicker .list-year li.hover{background-color:#eee;color:#000;}
+.datepicker .list-month li.selected, .datepicker .list-year li.selected{border:1px solid #ffcc99;background-color:#fffdef;color:#000;}
+.datepicker .dToolbar .button{border-color:#999;}
+.datepicker .yearBtnBar a.yearbtn{background-image:url(images/icon-tool.png);}
+.datepicker .panel-time{border:1px solid #a3bad9;background:url(images/background.gif) 0 -810px repeat-x;}
+.datepicker .panel-time span{color:#233D6D;}
+.datepicker .panel-time .spin{background:#fff;}
+.datepicker .panel-control{border-top:1px solid #69c;}
+.datepicker .panel-range li{border:1px solid #69c;}
+.datepicker .panel-range li.selected{border-top-width:0;background-color:#FFFDEF;color:#ff7400;}
+.datepicker .button{background-position:0 -611px;color:#3455a0;}
+.datepicker .button-hover{color:#333;}
+.date-input{border:1px solid #69c;}
+.date-input input{border-width:0;background:transparent;}
+.date-input .icon-date{background:url(../icons/date.png) 0 0 no-repeat;}
+

@@ -1,0 +1,28 @@
+<style type="text/css">
+	.demo-resize-box{position:relative;display:inline-block;width:auto;margin:20px 50px 20px 0;vertical-align:middle;width:500px;height:300px;border:1px dashed #ccf;background:#efefef;}
+	.demo-resize-box{*display:inline;}
+	.demo-resize{border:1px solid #b89;background:#ebc;width:100px;height:100px;margin-left:10px;}
+</style>
+<div class="demo-body">
+	
+	<div class="demo-resize-box">
+		<h4>默认</h4>
+		<div id="resize01" class="demo-resize"></div>
+	</div>
+	<div class="demo-resize-box">
+		<h4>指定可拖动的边</h4>
+		<div id="resize02" class="demo-resize"></div>
+	</div>
+	<div class="demo-resize-box">
+		<h4>设定最大最小尺寸</h4>
+		<div id="resize03" class="demo-resize"></div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+    $(function(){
+		$('#resize01').draggable({type:'resize',proxy:true});
+		$('#resize02').draggable({type:'resize',proxy:false,dir:'se'});
+		$('#resize03').draggable({type:'resize',proxy:true,limit:{width:{min:100,max:300},height:{min:100,max:200}}});
+    });
+</script>

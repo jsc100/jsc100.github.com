@@ -1,0 +1,91 @@
+﻿/* author 王海洋 */
+@charset "utf-8";
+.icon-new{background-image:url(icons/new.png);}
+.icon-remove{background-image:url(icons/bin.png);}
+.icon-modify{background-image:url(icons/modify.png);}
+.icon-search{background-image:url(icons/search.png);}
+.icon-undo{background-image:url(icons/undo.png);}
+.icon-redo{background-image:url(icons/redo.png);}
+.icon-go{background-image:url(icons/arrow-right.png);}
+.icon-back{background-image:url(icons/arrow-left.png);}
+.icon-ok{background-image:url(icons/tick-blue.png);}
+.icon-cancel{background-image:url(icons/cross-black.png);}
+.icon-open{background-image:url(icons/open.png);}
+.icon-add{background-image:url(icons/document-plus.png);}
+.icon-delete{background-image:url(icons/document-minus.png);}
+.icon-edit{background-image:url(icons/edit.png);}
+.icon-save{background-image:url(icons/disk.png);}
+.icon-exit{background-image:url(icons/door-out.png);}
+.icon-help{background-image:url(icons/help.png);}
+.icon-cut{background-image:url(icons/cut.png);}
+.icon-copy{background-image:url(icons/copy.png);}
+.icon-paste{background-image:url(icons/paste.png);}
+.icon-refresh{background-image:url(icons/refresh.png);}
+.icon-printer{background-image:url(icons/printer.png);}
+.icon-question{background-image:url(icons/question.png);}
+.icon-exclamation{background-image:url(icons/exclamation.png);}
+.icon-ie{background-image:url(icons/ie.png);}
+.icon-computer{background-image:url(icons/computer.png);}
+.icon-world{background-image:url(icons/world.png);}
+.icon-tool{background-image:url(icons/tool.png);}
+.icon-bug{background-image:url(icons/bug.png);}
+.icon-calendar{background-image:url(icons/calendar.png);}
+.icon-picture{background-image:url(icons/picture.png);}
+.icon-move{background-image:url(icons/move.png);}
+.icon-resize{background-image:url(icons/resize.png);}
+.icon-panel{background-image:url(icons/panel.png);}
+.icon-dialog{background-image:url(icons/dialog.png);}
+.icon-window{background-image:url(icons/window1.png);}
+.icon-layout{background-image:url(icons/layout.png);}
+.icon-arrow{background-image:url(icons/btn-arrow.png);}
+.icon-split{background-image:url(icons/btn-split.png);}
+.icon-plugin{background-image:url(icons/plugin.png);}
+.icon-checkbox-unchecked{background-image:url(icons/checkbox-unchecked.gif);}
+.icon-checkbox-checked{background-image:url(icons/checkbox-checked.gif);}
+.icon-checkbox-part{background-image:url(icons/checkbox-part.gif);}
+.icon-folder-close{background-image:url(icons/folder_close.png);}
+.icon-folder-open{background-image:url(icons/folder_open.png);}
+.icon-doc{background-image:url(icons/doc.png);}
+.icon-user{background-image:url(icons/user.png);}
+.icon-house{background-image:url(icons/house.png);}
+.icon-cog{background-image:url(icons/cog.png);}
+.icon-tool{background-image:url(icons/tool.png);}
+.icon-tools{background-image:url(icons/tools.png);}
+.icon-desktop{background-image:url(icons/desktop-empty.png);}
+.icon-group{background-image:url(icons/group.png);}
+.icon-comment{background-image:url(icons/comment.png);}
+.icon-move-up{background-image:url(icons/move-up.png);}
+.icon-move-down{background-image:url(icons/move-down.png);}
+.icon-move-left{background-image:url(icons/move-left.png);}
+.icon-move-right{background-image:url(icons/move-right.png);}
+.icon-move-all-left{background-image:url(icons/move-all-left.png);}
+.icon-move-all-right{background-image:url(icons/move-all-right.png);}
+
+.close0{background-position:0px 0px;}
+.close{background-position:0px -15px;}
+	.close-hover, .close0-hover{background-position:0px -30px;}
+.min0{background-position:0px -60px;}
+.min{background-position:0px -75px;}
+	.min-hover, .min0-hover{background-position:0px -90px;}
+.max0{background-position:0px -120px;}
+.max{background-position:0px -135px;}
+	.max-hover, .max0-hover{background-position:0px -150px;}
+.restore0{background-position:0px -180px;}
+.restore{background-position:0px -195px;}
+	.restore-hover, .restore0-hover{background-position:0px -210px;}
+.accord-up{background-position:0px -1500px;}
+	.accord-up-hover{background-position:0px -1515px;}
+.accord-down{background-position:0px -1440px;}
+	.accord-down-hover{background-position:0px -1455px;}
+.slide-up0, .toggle-up0{background-position:0px -240px;}
+.slide-up, .toggle-up{background-position:0px -255px;}
+	.slide-up-hover,.toggle-up-hover, .slide-up0-hover, .toggle-up0-hover{background-position:0px -270px;}
+.slide-down0, .toggle-down0{background-position:0px -300px;}
+.slide-down, .toggle-down{background-position:0px -315px;}
+	.slide-down-hover, .toggle-down-hover, .slide-down0-hover, .toggle-down0-hover{background-position:0px -330px;}
+.slide-left0{background-position:0px -360px;}
+.slide-left{background-position:0px -375px;}
+	.slide-left-hover, .slide-left0-hover{background-position:0px -390px;}
+.slide-right0{background-position:0px -420px;}
+.slide-right{background-position:0px -435px;}
+	.slide-right-hover, .slide-right0-hover{background-position:0px -450px;}

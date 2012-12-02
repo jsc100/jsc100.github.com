@@ -1,0 +1,60 @@
+@charset "utf-8";
+.icon-ui-button{background-image:url(images/ui_icon/ui-button.png);}
+.tree .icon-ui-button{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-button.png");}
+.icon-ui-toolbar{background-image:url(images/ui_icon/ui-toolbar.png);}
+.tree .icon-ui-toolbar{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-toolbar.png");}
+.icon-ui-accordion{background-image:url(images/ui_icon/ui-accordion.png);}
+.tree .icon-ui-accordion{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-accordion.png");}
+.icon-ui-combobox{background-image:url(images/ui_icon/ui-combobox.png);}
+.tree .icon-ui-combobox{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-combobox.png");}
+.icon-ui-datepicker{background-image:url(images/ui_icon/ui-datepicker.png);}
+.tree .icon-ui-datepicker{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-datepicker.png");}
+.icon-ui-menu{background-image:url(images/ui_icon/ui-menu.png);}
+.tree .icon-ui-menu{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-menu.png");}
+.icon-ui-scrollable{background-image:url(images/ui_icon/ui-scrollable.png);}
+.tree .icon-ui-scrollable{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-scrollable.png");}
+.icon-ui-scrollbar{background-image:url(images/ui_icon/ui-scrollbar.png);}
+.tree .icon-ui-scrollbar{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-scrollbar.png");}
+.icon-ui-slider{background-image:url(images/ui_icon/ui-slider.png);}
+.tree .icon-ui-slider{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-slider.png");}
+.icon-ui-spin{background-image:url(images/ui_icon/ui-spin.png);}
+.tree .icon-ui-spin{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-spin.png");}
+.icon-ui-tabs{background-image:url(images/ui_icon/ui-tabs.png);}
+.tree .icon-ui-tabs{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-tabs.png");}
+.icon-ui-groupbox{background-image:url(images/ui_icon/ui-groupbox.png);}
+.tree .icon-ui-groupbox{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-groupbox.png");}
+.icon-ui-tree{background-image:url(images/ui_icon/ui-tree.png);}
+.tree .icon-ui-tree{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-tree.png");}
+.icon-ui-layout{background-image:url(images/ui_icon/ui-layout.png);}
+.tree .icon-ui-layout{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-layout.png");}
+.icon-ui-move{background-image:url(images/ui_icon/ui-move.png);}
+.tree .icon-ui-move{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-move.png");}
+.icon-ui-drop{background-image:url(images/ui_icon/ui-drop.png);}
+.tree .icon-ui-drop{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-drop.png");}
+.icon-ui-resize{background-image:url(images/ui_icon/ui-resize.png);}
+.tree .icon-ui-resize{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-resize.png");}
+.icon-ui-select{background-image:url(images/ui_icon/ui-select.png);}
+.tree .icon-ui-select{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-select.png");}
+.icon-ui-panel{background-image:url(images/ui_icon/ui-panel.png);}
+.tree .icon-ui-panel{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-panel.png");}
+.icon-ui-dialog{background-image:url(images/ui_icon/ui-dialog.png);}
+.tree .icon-ui-dialog{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-dialog.png");}
+.icon-ui-popup{background-image:url(images/ui_icon/ui-popup.png);}
+.tree .icon-ui-popup{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-popup.png");}
+.icon-ui-alert{background-image:url(images/ui_icon/ui-alert.png);}
+.tree .icon-ui-alert{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-alert.png");}
+.icon-ui-pager{background-image:url(images/ui_icon/ui-pager.png);}
+.tree .icon-ui-pager{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-pager.png");}
+.icon-ui-portlet{background-image:url(images/ui_icon/ui-portlet.png);}
+.tree .icon-ui-portlet{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-portlet.png");}
+.icon-ui-zoom{background-image:url(images/ui_icon/ui-zoom.png);}
+.tree .icon-ui-zoom{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-zoom.png");}
+.icon-ui-mutiSelect{background-image:url(images/ui_icon/ui-select1.png);}
+.tree .icon-ui-mutiSelect{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-select1.png");}
+.icon-ui-palette{background-image:url(images/ui_icon/ui-palette.png);}
+.tree .icon-ui-palette{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-palette.png");}
+.icon-ui-window{background-image:url(images/ui_icon/ui-window.png);}
+.tree .icon-ui-window{_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src="demo/images/ui_icon/ui-window.png");}
+
+
+

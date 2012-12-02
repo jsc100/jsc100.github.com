@@ -1,0 +1,97 @@
+﻿/* author 王海洋 */
+@charset "utf-8";
+.slider-track{position:relative;overflow:visible;border-radius:4px;}
+.slider-track-x{height:5px;margin:4px 0;}
+.slider-track-y{width:5px;margin:0 4px;}
+.slider-track .slider-scale{position:absolute;top:0;left:0;overflow:hidden;}
+.slider-track-x .slider-scale{height:5px;}
+.slider-track-y .slider-scale{width:5px;}
+.slider-track .slider-handle{position:absolute;overflow:hidden;}
+.slider-track .slider-handle span{display:block;position:absolute;overflow:hidden;}
+.slider-track .slider-handle-x{top:-5px;left:0;width:24px;height:15px;padding:0 3px;}
+.slider-track .slider-handle-x span{}
+.slider-track .slider-handle-x span.left-bar{top:0;left:0;width:3px;height:100%;}
+.slider-track .slider-handle-x span.right-bar{top:0;right:0;width:3px;height:100%;}
+.slider-track .slider-handle-x span.center-bar{position:static;width:100%;height:100%;background-repeat:repeat-x;}
+.slider-track .slider-handle-y{left:-5px;top:0;width:15px;height:24px;padding:3px 0;}
+.slider-track .slider-handle-y span{}
+.slider-track .slider-handle-y span.left-bar{top:0;left:0;width:100%;height:3px;}
+.slider-track .slider-handle-y span.right-bar{bottom:0;left:0;width:100%;height:3px;}
+.slider-track .slider-handle-y span.center-bar{position:static;width:100%;height:100%;background-repeat:repeat-y;}
+.slider-track .handle-x-hover span.center-bar{}
+.slider-track .handle-x-press span.center-bar{}
+.slider-track .handle-y-hover span.center-bar{}
+.slider-track .handle-y-press span.center-bar{}
+.slider-track .slider-handle-x-fix{width:8px;}
+.slider-track .slider-handle-y-fix{height:8px;}
+
+.scrollbar .handle{display:inline-block;position:absolute;top:0;left:0;width:auto;height:15px;margin:1px 17px;overflow:hidden;}
+.scrollbar .handle_b{display:inline-block;width:auto;height:15px;margin-left:3px;overflow:hidden;}
+.scrollbar .handle, .scrollbar .handle_b{*display:inline;}
+.scrollbar .handle_c{height:15px;margin-right:3px;overflow:hidden;}
+.scrollbar .handleHover .handle_c{}
+.scrollbar .handlePress .handle_c{}
+.scrollbar .spinBtn{position:absolute;top:0;width:15px;height:15px;margin:1px;}
+.scrollbar .spinUp{left:0;}
+.scrollbar .spinUpHover{}
+.scrollbar .spinDown{right:0;}
+.scrollbar .spinDownHover{}
+
+.scrollbar_vert{top:0;right:0;left:auto;bottom:auto;width:17px;}
+.scrollbar_vert .spinUp{left:0;}
+.scrollbar_vert .spinUpHover{}
+.scrollbar_vert .spinDown{top:auto;bottom:0;}
+.scrollbar_vert .spinDownHover{}
+.scrollbar_vert .handle{width:15px;height:auto;margin:17px 1px;overflow:hidden;}
+.scrollbar_vert .handle_b{width:15px;height:auto;margin-left:0;margin-top:3px;overflow:hidden;}
+.scrollbar_vert .handle_c{height:auto;margin-right:0;margin-bottom:3px;overflow:hidden;}
+.scrollbar_vert .handleHover .handle_c{}
+.scrollbar_vert .handlePress .handle_c{}
+
+/* skin default */
+.slider-track{border:1px solid #aaa4a1;}
+.slider-track-x{background:url(images/slider-bg.png) 0 -9px repeat-x;}
+.slider-track-y{background:url(images/slider-v-bg.png) -9px 0 repeat-y;}
+.slider-track-x .slider-scale{background:url(images/slider-scale-bg.png) 0 -9px repeat-x;}
+.slider-track-y .slider-scale{background:url(images/slider-v-scale-bg.png) -9px 0 repeat-y;}
+.slider-track .slider-handle-x span{background:url(images/slider-handle-x.gif) 0 0 no-repeat;}
+.slider-track .slider-handle-x span.left-bar{background-position:0 0;}
+.slider-track .slider-handle-x span.right-bar{background-position:0 -30px;}
+.slider-track .slider-handle-x span.center-bar{background-position:0 -15px;}
+.slider-track .slider-handle-y span{background:url(images/slider-handle-y.gif) 0 0 no-repeat;}
+.slider-track .slider-handle-y span.left-bar{background-position:0 0;}
+.slider-track .slider-handle-y span.right-bar{background-position:-30px 0;}
+.slider-track .slider-handle-y span.center-bar{background-position:-15px 0;}
+.slider-track .handle-x-hover span.left-bar{background-position:0 -45px;}
+.slider-track .handle-x-hover span.center-bar{background-position:0 -60px;}
+.slider-track .handle-x-hover span.right-bar{background-position:0 -75px;}
+.slider-track .handle-x-press span.left-bar{background-position:0 -90px;}
+.slider-track .handle-x-press span.center-bar{background-position:0 -105px;}
+.slider-track .handle-x-press span.right-bar{background-position:0 -120px;}
+.slider-track .handle-y-hover span.left-bar{background-position:-45px 0;}
+.slider-track .handle-y-hover span.center-bar{background-position:-60px 0;}
+.slider-track .handle-y-hover span.right-bar{background-position:-75px 0;}
+.slider-track .handle-y-press span.left-bar{background-position:-90px 0;}
+.slider-track .handle-y-press span.center-bar{background-position:-100px 0;}
+.slider-track .handle-y-press span.right-bar{background-position:-120px 0;}
+.slider-track .slider-handle-x-fix{background:url(images/slider-thumb.png) 0 0 no-repeat;}
+.slider-track .slider-handle-y-fix{background:url(images/slider-v-thumb.png) 0 0 no-repeat;}
+.slider-track .slider-handle-x-fix span.left-bar, .slider-track .slider-handle-x-fix span.right-bar, .slider-track .slider-handle-x-fix span.center-bar, .slider-track .slider-handle-y-fix span.left-bar, .slider-track .slider-handle-y-fix span.right-bar, .slider-track .slider-handle-y-fix span.center-bar{background:none;}
+.scrollbar .handle{background:url(images/scrollbar_handle.gif) 0 0 no-repeat;}
+.scrollbar .handle_b{background:url(images/scrollbar_handle.gif) right -30px no-repeat;}
+.scrollbar .handle_c{background:url(images/scrollbar_handle.gif) 0 -15px repeat-x;}
+.scrollbar .handleHover .handle_c{background-position:0 -45px;}
+.scrollbar .handlePress .handle_c{background-position:0 -60px;}
+.scrollbar .spinUp{background-position:-15px -105px;}
+.scrollbar .spinUpHover{background-position:-30px -105px;}
+.scrollbar .spinDown{background-position:-15px -120px;}
+.scrollbar .spinDownHover{background-position:-30px -120px;}
+.scrollbar_vert .spinUp{background-position:-15px -60px;}
+.scrollbar_vert .spinUpHover{background-position:-30px -60px;}
+.scrollbar_vert .spinDown{background-position:-15px -75px;}
+.scrollbar_vert .spinDownHover{background-position:-30px -75px;}
+.scrollbar_vert .handle{background:url(images/scrollbar_handle_vert.gif) 0 0 no-repeat;}
+.scrollbar_vert .handle_b{background:url(images/scrollbar_handle_vert.gif) -30px bottom no-repeat;}
+.scrollbar_vert .handle_c{background:url(images/scrollbar_handle_vert.gif) -15px 0 repeat-y;}
+.scrollbar_vert .handleHover .handle_c{background-position:-45px 0;}
+.scrollbar_vert .handlePress .handle_c{background-position:-60px 0;}

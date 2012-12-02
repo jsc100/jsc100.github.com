@@ -1,0 +1,46 @@
+/* author 王海洋 */
+@charset "utf-8";
+.pagerbar{min-height:24px;height:auto !important;height:24px;padding:0;overflow:hidden;line-height:24px;text-align:center;font-size:0;}
+.pager{display:inline-block;width:auto;}
+.pager li{display:inline-block;width:16px;height:24px;margin:0px 3px;font-size:12px;line-height:24px;vertical-align:middle;}
+.pager li, .pager-box{*display:inline;}
+.pager .hover{}
+.pager .page-first{}
+.pager .page-prev{}
+.pager .page-next{}
+.pager .page-last{}
+.pager .page-num{width:auto;padding:1px 10px;}
+.pager .page-size{width:auto;height:24px;padding:0 10px 0 3px;}
+.pager .page-togo{width:auto;height:24px;padding:0 3px 0 10px;}
+.pager label{height:24px;padding-right:2px;line-height:24px;line-height:26px\9;_line-height:24px;vertical-align:middle;}
+.pager input{width:14px;height:16px;font-size:12px;line-height:16px;vertical-align:middle;}
+.pager input.text{margin:0 2px;padding:0 2px;}
+.pager select{height:18px;font-size:12px;*font-size:10px;vertical-align:middle;}
+.pager .refresh{height:16px;margin-left:6px;}
+.pager .refresh-selected{}
+.pagerbar .page-message{display:inline-block;width:auto;vertical-align:middle;font-size:12px;line-height:24px;white-space:nowrap;}
+
+.pager2{height:20px;padding:3px 0;overflow:hidden;text-align:center;font-size:0;}
+.pager2 li{display:inline-block;width:22px;height:18px;margin-right:6px;font-size:12px;line-height:18px;vertical-align:middle;}
+.pager2 li{*display:inline;}
+.pager2 .hover{}
+.pager2 .selected{}
+.pager2 .noborder{border:0 none;}
+.pager2 .page-first, .pager2 .page-prev, .pager2 .page-next, .pager2 .page-last{width:auto;padding:0 5px;}
+
+/* skin default */
+.pagerbar{border-top:1px solid #b8b8b8;background:url(images/background.gif) 0 -430px repeat-x;}
+.pager li{filter:alpha(opacity=70);opacity:0.7;}
+.pager li.disabled{filter:alpha(opacity=40);opacity:0.4;}
+.pager .hover{filter:alpha(opacity=100);opacity:1.0;}
+.pager .page-first{background:url(../icons/page_first.gif) 0 4px no-repeat;}
+.pager .page-prev{background:url(../icons/page_prev.gif) 0 4px no-repeat;}
+.pager .page-next{background:url(../icons/page_next.gif) 0 4px no-repeat;}
+.pager .page-last{background:url(../icons/page_last.gif) 0 4px no-repeat;}
+.pager input.text{border:1px solid #69c;}
+.pager .refresh{background-image:url(images/page_loading01.gif);}
+.pager .refresh-selected{background-image:url(images/page_loading02.gif);}
+.pager2{background:url(images/background.gif) 0 -430px repeat-x;}
+.pager2 li{border:1px solid #4772a3;}
+.pager2 .hover{background-color:#ccf;}
+.pager2 .selected{background-color:#acabbd;}

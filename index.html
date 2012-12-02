@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>jsc100</title>
+		<meta name="keywords" content="jsc,jsc100,jquery,ui,前端框架,web,js,javascript,用户体验,ajax,tree,tabs,layout,datepicker" />
+		<meta name="description" content="jsc是一款基于jquery的web ui框架，完美兼容ie6等主流浏览器，高度复用的代码能有效缩短开发时间，减少代码量，轻松实现界面开发，带来绝佳用户体验。" />
+		<link rel="SHORTCUT ICON" href="favicon.ico">
+        <link rel="stylesheet" type="text/css" href="themes/icon.css">
+        <link rel="stylesheet" type="text/css" href="themes/jsc.css">
+        <link rel="stylesheet" type="text/css" href="themes/default/skin.css">
+        <link rel="stylesheet" type="text/css" href="demo/index.css">
+        <link rel="stylesheet" type="text/css" href="demo/treeIcon.css">
+    </head>
+    <body>
+        <div id="top" class="top" style="height:60px;">
+        	<div class="logo pngfix"><h1>jsc,jsc100,jquery,ui,前端框架</h1></div>
+            <ul class="themesBtn">
+            	<li id="blue"></li>
+            	<li id="blue"></li>
+            	<li id="blue"></li>
+            	<li id="black"></li>
+            	<li id="blue"></li>
+            </ul>
+			<div class="topLink">
+				<a href="https://github.com/jsc100/jsc100.github.com/">下载</a>
+				<a id="aboutus" href="#">关于我们</a>
+			</div>
+        </div>        
+        <div class="middle">
+            <div class="left" style="width:200px;margin-left:5px"></div>
+            <div id="center" class="center" style="margin-right:5px"><div id="tabs"></div></div>
+        </div>        
+        <div id="bottom" class="bottom" style="height:40px;">Copyright © 2012&nbsp;&nbsp;&nbsp;&nbsp;JSC 团队</div> 
+		       
+        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="src/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="jsc.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+				var treeItems=[
+					[
+						{text:'button',cls:'icon-ui-button',url:'demo/button.html'},
+						{text:'drag',cls:'icon-ui-move',url:'demo/drag.html'},
+						{text:'drop',cls:'icon-ui-drop',url:'demo/drop.html'},
+						{text:'resize',cls:'icon-ui-resize',url:'demo/resize.html'},
+						{text:'select',cls:'icon-ui-select',url:'demo/select.html'},
+						{text:'popup',cls:'icon-ui-popup',url:'demo/popup.html',target:'_blank'},
+						{text:'combobox',cls:'icon-ui-combobox',url:'demo/comboBox.html'},
+						{text:'spin',cls:'icon-ui-spin',url:'demo/spin.html'},
+						{text:'slider',cls:'icon-ui-slider',url:'demo/slider.html'},
+						{text:'scrollable',cls:'icon-ui-scrollable',url:'demo/scrollable.html'},
+						{text:'accordion',cls:'icon-ui-accordion',url:'demo/accordion.html'},
+						{text:'menu',cls:'icon-ui-menu',url:'demo/menu.html'},
+						{text:'contextMenu',cls:'icon-ui-menu',url:'demo/contextMenu.html'},
+						{text:'datepicker',cls:'icon-ui-datepicker',url:'demo/datepicker.html'},
+						{text:'pager',cls:'icon-ui-pager',url:'demo/pager.html'},
+						{text:'tree',cls:'icon-ui-tree',url:'demo/tree.html'},
+						{text:'tabs',cls:'icon-ui-tabs',url:'demo/tabs.html'},
+						{text:'panel',cls:'icon-ui-panel',url:'demo/panel.html'},
+						{text:'dialog',cls:'icon-ui-dialog',url:'demo/dialog.html'},
+						{text:'alert',cls:'icon-ui-alert',url:'demo/alert.html'},
+						{text:'layout',cls:'icon-ui-layout',url:'demo/layout.html'}
+					],
+					[
+						{text:'toolbar',cls:'icon-ui-toolbar',url:'demo/toolbar.html'},
+						{text:'combotree',cls:'icon-ui-combobox',url:'demo/comboTree.html'},
+						{text:'slidebox',cls:'icon-ui-scrollable',url:'demo/slidebox.html'},
+						{text:'advanced tree',cls:'icon-ui-tree',url:'demo/advancedTree.html'},
+						{text:'advanced slider',cls:'icon-ui-palette',url:'demo/advancedSlider.html'},
+						{text:'menubar',cls:'icon-ui-menu',url:'demo/menubar.html'}
+					],
+					[
+						{text:'productDetail',cls:'icon-ui-zoom',url:'demo/productDetail.html'},
+						{text:'mutipleSelect',cls:'icon-ui-mutiSelect',url:'demo/mutipleSelect.html'},
+						{text:'window',cls:'icon-ui-window',url:'demo/window.html'}
+					]
+				];
+				var layout1=$('body').layout({resizable:false,closeable:false});
+				var layout2=$('.middle').layout({axis:'x',left:{Collapsable:true,maxSize:250,minSize:50}});
+				layout2.find('.left').panel({
+					icon:'icon-plugin',
+					title:'插件集',
+					headerTools:[{
+						cls:'button-close-left',
+						toggleCls:[{hover:'button-close-left-hover',press:''}],
+						click:function(){layout2.layout('toggle','left');}
+					}]
+				}).find('.panel-body').accordion({
+					fit:false,
+					data:[
+						{icon:'icon-cog',caption:'组件',content:'<ul/>'},
+						{icon:'icon-tools',caption:'高级应用',content:'<ul/>'},
+						{icon:'icon-world',caption:'综合应用',content:'<ul/>'}
+					]
+				}).find('.accordion-body>ul').each(function(i,n){
+					$(this).wrap('<div style="width:100%;height:100%;overflow:auto;"/>').tree({
+						radioOrCheckbox:'',
+						selectedCls:'',
+						data:treeItems[i],
+						adapter:function(attr,obj){attr.url=obj.url||'';attr.target=obj.target||'';},
+						click:function(jsc){
+							if(jsc.button.attr('target')=='_blank'){
+								window.open(jsc.button.attr('url'),jsc.button.text());
+							}else{
+								tab.tabs('insert',{icon:jsc.button.prev().attr('class').replace('tree-icon',''),caption:jsc.button.text(),url:jsc.button.attr('url'),closeable:true});								
+							}
+						}
+					});
+				});
+				var tab=$('#tabs').tabs({ajax:{show:{message:false,loader:false},error:function(){this.html('整理中，敬请期待！')}},data:[{index:0,icon:'icon-house',caption:'首页',url:'demo/index.html'}]});
+				$('#aboutus').click(function(){
+					tab.tabs('insert',{icon:'icon-group',caption:$(this).text(),url:'demo/aboutus.html',closeable:true});
+				});
+			});
+         </script>
+    </body>
+</html>

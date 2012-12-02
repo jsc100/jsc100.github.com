@@ -1,0 +1,22 @@
+﻿/* author 王海洋 */
+@charset "utf-8";
+.multipleBox{display:inline-block;width:auto;height:200px;font-size:0;}
+.multiple, .multipleBtnBox{display:inline-block;width:auto;height:100%;vertical-align:middle;}
+.multipleBox, .multiple, .multipleBtnBox{*display:inline;}
+.multipleBtnBox{width:auto;padding:0 10px;text-align:center;}
+.multipleBtnBox .button{display:block;float:none;margin:10px 0;}
+.multiple{width:200px;padding:7px;overflow-x:hidden;overflow-y:scroll;}
+.multiple-item{height:16px;padding:3px 2px;margin-bottom:1px;border-bottom:0;overflow:hidden;font-size:12px;letter-spacing:-1px;}
+.multiple-item span{display:block;height:16px;padding-left:20px;background-repeat:no-repeat;overflow:hidden;vertical-align:top;letter-spacing:normal;line-height:18px;}
+.multiple .hover{padding:2px 1px;}
+.select-touched,.select-selected{}
+.drag-helper .select-selected{padding:2px 1px;}
+.drop-start{}
+.drop-touch{}
+
+/* skin default */
+.multiple{border:1px solid #98c0f4;background-color:#ffe;}
+.multiple-item{border-bottom:0;background:none;background-color:#e3efff;color:#003399;}
+.multiple .hover{border:1px solid #659ff9;background-color:#d5e5f5;}
+.select-touched,.select-selected{background-color:#7787ff;}
+.drag-helper .select-selected{border:1px solid #ddd;background-color:#fbec88;}

@@ -1,0 +1,85 @@
+<style type="text/css">
+	.switchgroup{font-size:0;}
+	.switchgroup .button{margin-right:0;}
+</style>
+<div class="demo-body">
+	
+	<fieldset class="fieldset">
+    	<legend>
+            <span class="title">button</span>
+        </legend>
+        <div class="content">
+        	<div class="demo-box">
+				<h4>只有文字</h4>
+				<a id="btn01"></a>
+				<a id="btn01_1">取消</a>
+        	</div>
+        	<div class="demo-box">
+				<h4>只有图标</h4>
+				<a id="btn02"></a>
+        	</div>
+        	<div class="demo-box">
+				<h4>图标在文字左边</h4>
+				<a id="btn03"></a>
+        	</div>
+        	<div class="demo-box">
+				<h4>图标在文字右边</h4>
+				<a id="btn04"></a>
+        	</div>
+        	<div class="demo-box">
+				<h4>disabled状态</h4>
+				<a id="btn07"></a>
+        	</div>
+        </div>
+    </fieldset>
+	
+	<fieldset class="fieldset">
+    	<legend>
+            <span class="title">checkbox</span>
+        </legend>
+        <div class="content">
+        	<div class="demo-box">
+				<a class="btn05">web</a>
+				<a class="btn05">javascript</a>
+				<a class="btn05">jQuery</a>
+        	</div>
+        	<div class="demo-box switchgroup">
+				<a class="btn08" style="border-radius:3px 0 0 3px;border-right-width:0;*margin-right:-1px;">web</a>
+				<a class="btn08" style="border-radius:0;border-right-width:0;*margin-right:-1px;">javascript</a>
+				<a class="btn08" style="border-radius:0 3px 3px 0;">jQuery</a>
+        	</div>
+        </div>
+    </fieldset>
+	
+	<fieldset class="fieldset">
+    	<legend>
+            <span class="title">radiobutton</span>
+        </legend>
+        <div class="content">
+        	<div class="demo-box">
+				<a class="btn06">web</a>
+				<a class="btn06">javascript</a>
+				<a class="btn06">jQuery</a>
+        	</div>
+        	<div class="demo-box switchgroup">
+				<a class="btn09" style="border-radius:3px 0 0 3px;border-right-width:0;*margin-right:-1px;">开启</a>
+				<a class="btn09" style="border-radius:0 3px 3px 0;">关闭</a>
+        	</div>
+        </div>
+    </fieldset>
+	
+</div>
+<script type="text/javascript">
+	$('#btn01').button({text:'确定'});
+	$('#btn01_1').button();
+	$('#btn02').button({icon:'icon-dialog'});
+	$('#btn03').button({icon:'icon-bug',text:'调试'});
+	$('#btn04').button({iconCls:'icon-right',icon:'icon-picture',text:'图片'});
+	$('.btn05, .btn08').button({click:function(){
+		$(this).toggleClass('button-selected');
+	}});
+	$('.btn06, .btn09').button({click:function(){
+		$(this).addClass('button-selected').siblings().removeClass('button-selected');
+	}});
+	$('#btn07').button({cls:'button disabled',icon:'icon-calendar',text:'选择日期'});
+</script>

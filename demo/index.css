@@ -1,0 +1,31 @@
+﻿/* author 王海洋 */
+@charset "utf-8";
+body{background-color:#def;}
+#top{border:0 none;background:url(images/index/bg_index_header.jpg) top right no-repeat;}
+#bottom{border:0 none;background-color:transparent;text-align:center;line-height:40px;color:#666;font-family:Tahoma;}
+#center{border:0 none;}
+.logo{position:absolute;top:0;left:16px;width:292px;height:60px;background-image:url(images/index/jsc_logo.png);}
+.logo h1{text-indent:-9999px;}
+.themesBtn{position:absolute;top:40px;right:0;width:103px;height:11px;background:url(images/index/themes_select.gif) 0 0 no-repeat;}
+.themesBtn li{display:inline;float:left;width:15px;height:11px;margin-right:5px;cursor:pointer;}
+.topLink{position:absolute;top:4px;right:10px;width:auto;height:16px;font-size:0;}
+.topLink a{display:inline-block;width:auto;height:14px;font-size:13px;line-height:14px;margin-left:12px;padding-left:12px;color:#369;border-left:1px solid #369;}
+.left .accordion{border-width:0;}
+.left .accordion .accordion-body{overflow:auto;}
+.left .panel-header{border-bottom-width:0;}
+
+#panel{border:0 none;}
+
+#tabs .tabs-body{overflow-y:auto;position:relative;}
+
+.middle .bar-collapsed-left{margin:0 5px;}
+
+.demo-body{padding:0 0 20px 20px;}
+.demo-body h4{padding-bottom:10px;font-size:13px;line-height:20px;color:#666;}
+.demo-body .fieldset{margin:20px 20px 0 0;border-color:#ccf;}
+.demo-body .fieldset legend .title{font-size:14px;font-weight:bold;text-shadow:0 1px 0 rgba(0,0,0,0.1);clear:both;}
+.demo-body .fieldset .content{padding:10px;}
+.demo-body .demo-box{display:inline-block;width:auto;margin:0 50px 20px 0;vertical-align:middle;}
+.demo-body .demo-box{*display:inline;}
+
+

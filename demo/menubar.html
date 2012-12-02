@@ -1,0 +1,93 @@
+<style type="text/css">
+	.demo-menu-container{width:100%;height:100%;background:#fcfcfc;position:relative;}
+</style>
+<div class="demo-menu-container">
+	
+	<div id="demo-menu-toolbar"></div>
+
+</div>
+<script type="text/javascript">
+	var btns=[{group:'group1',text:'文件',icon:'icon-computer',opt:{}},
+			{group:'group1',text:'编辑',icon:'icon-edit',opt:{}},
+			{group:'group1',text:'工具',icon:'icon-tool',opt:{}},
+			{group:'group1',text:'帮助',icon:'icon-help',opt:{}}
+		],
+		menuDatas=[
+			[
+				{text:'新建',cls:'icon-new'},
+				{text:'打开',cls:'icon-open'},
+				{},
+				{text:'保存',cls:'icon-save'},
+				{text:'另存为',cls:''},
+				{},
+				{text:'退出',cls:'icon-exit'},
+			],
+			[
+				{text:'撤销',cls:'icon-undo'},
+				{},
+				{text:'剪切',cls:'icon-cut'},
+				{text:'复制',cls:'icon-copy'},
+				{text:'粘贴',cls:'icon-paste'},
+				{text:'删除',cls:'icon-delete'},
+			],
+			[
+				{text:'下载'},
+				{text:'选项'},
+				{},
+				{text:'组件',sub:[{text:'firebug',cls:'icon-bug'},{text:'拾色器'}]}
+			],
+			[
+				{text:'帮助'},
+				{text:'提交反馈'},
+				{},
+				{text:'关于'}
+			]
+		];
+	var toolbar=$('#demo-menu-toolbar').button({
+		selector:'>div>a',
+		groupCls:'',
+		keep:false,
+		btns:btns,
+		click:function(jsc){
+			var menu=jsc.button.menu('option','menu');
+			menu.popup('open');
+			$$.is('ie')&&menu[0].fireEvent('onmove');
+			jsc.button.addClass('button-selected');	
+		}
+	});
+	var buttons=toolbar.find('a'),option=toolbar.button('option',0),id=option.id,btnOpt=option.btnOpt;
+	$.each(buttons,function(i,n){
+		var $this=$(n);
+		$this.menu({
+			data:menuDatas[i],
+			width:[100,100],
+			pos:[
+				{by:toolbar,mode:'margin',side:'bottom',offset:-2},
+				{by:$this,mode:'padding',side:'left'}
+			],
+			attach:function(opt){
+				btnOpt[$this.attr(id)]={
+					mouseenter:function(){
+						var isShow=false;
+						$.each(buttons,function(){
+							if($(this).menu('option','menu').is(':visible')){
+								isShow=true;
+								return false;
+							}
+						});
+						if(isShow){
+							$$.$doc.mousedown();
+							opt.menu.popup('open');
+							$$.is('ie')&&opt.menu[0].fireEvent('onmove');
+							$this.addClass('button-selected');							
+						}
+					}
+				};
+			},
+			click:function(jsc){
+				$$.alert(jsc.button.text());
+			},
+			close:{after:function(){$this.removeClass('button-selected');}}
+		});
+	});
+</script>

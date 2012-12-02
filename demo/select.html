@@ -1,0 +1,53 @@
+<style type="text/css">
+	.demo-select-box{position:relative;display:inline-block;width:auto;margin:20px 50px 20px 0;vertical-align:middle;width:500px;height:300px;border:1px dashed #ccf;background:#efefef;}
+	.demo-select-box{*display:inline;}
+	.demo-select{display:inline-block;border:1px solid #b89;background:#ebc;width:100px;height:100px;margin:10px 0 0 10px;}
+	.demo-select{*display:inline;}
+	#select01 .select-selected{border:1px solid #89b;background:#bce;}
+	#select01 .select-touched{border:1px solid #ddd;background:#FBEC88;}
+
+	.select-item{display:inline-block;cursor:pointer;width:150px;height:16px;padding:2px 1px;margin:10px 20px 0 10px;border:1px solid #89b;font-size:0;color:#333;letter-spacing:-1px;background-color:#bce;overflow:hidden;}
+	.select-item{*display:inline;}
+	.select-item span{display:inline-block;vertical-align:top;}
+	.select-item .lIcon{width:16px;height:16px;margin:2px 0 0 3px;*margin:-2px 0 0 1px;}
+	.select-item .title{height:16px;line-height:18px;_line-height:20px;font-size:12px;color:#039;letter-spacing:normal;overflow:hidden;}
+	#select02 .select-touched, #select02 .select-selected{border:1px solid #ddd;background-color:#FBEC88;}
+
+</style>
+<div class="demo-body">
+	
+	<div id="select01" class="demo-select-box">
+		<div class="demo-select"></div>
+		<div class="demo-select"></div>
+		<div class="demo-select"></div>
+	</div>
+	
+	<div id="select02" class="demo-select-box">
+        <div class="select-item">
+            <span class="lIcon"><input type="checkbox" /></span>
+            <span class="title">选项一</span>
+        </div>
+        <div class="select-item">
+            <span class="lIcon"><input type="checkbox" /></span>
+            <span class="title">选项二</span>
+        </div>
+        <div class="select-item">
+            <span class="lIcon"><input type="checkbox" /></span>
+            <span class="title">选项三</span>
+        </div>
+        <div class="select-item">
+            <span class="lIcon"><input type="checkbox" /></span>
+            <span class="title">选项四</span>
+        </div>
+        <div class="select-item">
+            <span class="lIcon"><input type="checkbox" /></span>
+            <span class="title">选项五</span>
+        </div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+    $(function(){
+		$('.demo-select-box').draggable({type:'select'});
+    });
+</script>

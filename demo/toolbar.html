@@ -1,0 +1,85 @@
+<div class="demo-body">
+	
+	<fieldset class="fieldset">
+    	<legend>
+            <span class="title">toolbar 宽度自适应</span>
+        </legend>
+        <div class="content">
+			<div id="toolbar01">
+                <div class="button-group">
+					<a>
+						<span class="icon-add">添加</span>
+					</a>
+					<a class="disabled">
+						<span class="icon-delete">删除</span>
+					</a>
+					<a>
+						<span class="icon-modify">修改</span>
+					</a>
+					<a>
+						<span class="icon-search">查询</span>
+					</a>
+                </div>				
+                <div id="gp3" class="button-group">
+					<a id="undo">
+						<span class="icon-undo"></span>
+					</a>
+                </div>				
+			</div>
+        </div>
+    </fieldset>
+	
+	<fieldset id="demo-toolbar-fieldset" class="fieldset" style="width:400px;">
+    	<legend>
+            <span class="title">toolbar 组自动折行</span>
+        </legend>
+        <div class="content">
+			<div id="toolbar02">
+		        <div id="gp1" class="button-group">
+					<a id='dis' class="disabled">
+						<span class="icon-new">新建</span>
+					</a>
+					<a>
+						<span class="icon-edit">编辑</span>
+					</a>
+					<a>
+						<span class="icon-save">保存</span>
+					</a>
+					<a>
+						<span class="icon-exit">退出</span>
+					</a>
+		        </div>				
+		        <div id="gp2" class="button-group">
+					<a>
+						<span class="icon-refresh">刷新</span>
+					</a>
+					<a>
+						<span class="icon-cut">剪切</span>
+					</a>
+					<a>
+						<span class="icon-copy">拷贝</span>
+					</a>
+		        </div>				
+			</div>
+        </div>
+    </fieldset>
+	
+</div>
+<script type="text/javascript">
+	$('#toolbar01').button({
+		selector:'.button-group>a',
+		iconCls:'icon-right',
+		keep:false,
+		click:function(jsc){alert($.trim(jsc.button.text()))},
+		btns:[{group:'gp3',attr:{id:'undo'},opt:{click:function(jsc){alert('撤消')}}},
+			{group:'gp3',icon:'icon-redo',opt:{click:function(jsc){alert('重做')}}},
+			{icon:'icon-computer'},{icon:'icon-tool'},{icon:'icon-cog'},{icon:'icon-world'},{group:'gp4',icon:'icon-help'},{group:'gp4',index:0,icon:'icon-printer'}]
+	});
+	$('#toolbar02').button({
+		selector:'.button-group>a',
+		keep:false,
+		click:function(jsc){alert($.trim(jsc.button.text()))},
+		btns:[{group:'gp1',index:1,icon:'icon-open',text:'打开'},{group:'gp2',index:'6',icon:'icon-paste',text:'粘贴'}]
+	});
+	$('#demo-toolbar-fieldset').draggable({type:'resize',proxy:true});
+</script>

@@ -1,0 +1,31 @@
+﻿/* author 王海洋 */
+@charset "utf-8";
+.panel{overflow:hidden;}
+.panel-body{overflow:auto;}
+.panel-header{position:relative;height:16px;padding:4px;-webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;}
+.panel-header span{display:block;}
+.panel-header-icon{position:absolute;top:4px;left:4px;width:16px;height:16px;margin-right:4px;}
+.panel-header-title{height:16px;overflow:hidden;line-height:16px;line-height:18px\9;font-size:12px;font-weight:bold;}
+.panel-header .tool-box{position:absolute;top:4px;right:4px;height:15px;margin:1px 0 0 4px;overflow:hidden;}
+.header-tool{display:inline-block;width:15px;height:15px;margin-left:2px;overflow:hidden;}
+.header-tool{*display:inline;}
+.panel-bar{min-height:24px;height:auto !important;height:24px;padding-bottom:2px;}
+.dialog{border-radius:5px;box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);-webkit-box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);-moz-box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);}
+.dialog-bar-control{height:26px;padding:6px 0;}
+
+.prompt, .alert, .confirm{padding:10px 10px 10px 60px;line-height:20px;min-height:40px;height:auto !important;height:40px;}
+.prompt input{margin-top:4px;width:100%;height:20px;line-height:20px;}
+
+/* skin default */
+.prompt{background:url(../icons/alert-help.png) 14px 14px no-repeat;}
+.prompt input{border:1px solid #999;background:#fff;}
+.alert{background:url(../icons/alert-important.png) 14px 14px no-repeat;}
+.confirm{background:url(../icons/alert-info.png) 14px 14px no-repeat;}
+.panel{border:1px solid #99BBE8;background-color:#DFE8F6;}
+.panel-body{background-color:#fff;}
+.panel-header{border-bottom:1px solid #99f;background:url(images/background.gif) 0 -1px repeat-x;}
+.panel-header-title{color:#039;}
+.header-tool{background-image:url(images/icon-tool.png);}
+.panel-bar{background:url(images/background.gif) 0 -430px repeat-x;}
+.dialog-bar-control{background-color:#DFE8F6;}
+

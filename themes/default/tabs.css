@@ -1,0 +1,41 @@
+﻿/* author 王海洋 */
+@charset "utf-8";
+.tabs{}
+.tabs-body{}
+.tabs-x .tabs-header-bar{position:relative;height:25px;padding-top:2px;overflow:hidden;}
+.tabs-x .scroll-view{position:relative;height:23px;overflow:hidden;}
+.tabs-x .spin-show .scroll-view{margin:0 18px;}
+.tabs-x .scroll-track{height:23px;white-space:nowrap;}
+.tabs-x .tabs-header{display:inline-block;float:left;height:16px;margin-left:2px;padding:3px 5px 2px;border-top-left-radius:4px;border-top-right-radius:4px;overflow:hidden;line-height:16px;line-height:18px\9;}
+.tabs-x .tabs-header{*display:inline;}
+.tabs-x .tabs-header-hover{background-position:0 -380px;}
+.tabs-x .tabs-header-selected{border-bottom:0 none;padding-bottom:3px;font-weight:bold;}
+.tabs-x .tabs-header span{display:inline-block;height:16px;overflow:hidden;font-size:12px;}
+.tabs-x .tabs-header span span{}
+.tabs-x .tabs-header .icon-left{padding-left:20px;background-repeat:no-repeat;background-position:0 0;}
+.tabs-x .tabs-header .icon-right{padding-right:20px;background-repeat:no-repeat;background-position:right 0;}
+
+.tabs-x .header-foot{height:2px;margin-top:-1px;overflow:hidden;}
+
+.tabs-x .tabs-header-bar .spin-btn{position:absolute;top:2px;z-index:10;width:18px;height:22px;}
+.tabs-x .tabs-header-bar .spin-up{left:0;}
+.tabs-x .tabs-header-bar .spin-up-hover{}
+.tabs-x .tabs-header-bar .spin-down{right:0;}
+.tabs-x .tabs-header-bar .spin-down-hover{}
+
+
+/* skin default */
+.tabs{border:1px solid #99f;}
+.tabs-x .tabs-header-bar{border-bottom:1px solid #99f;background:url(images/background.gif) 0 -251px repeat-x;}
+.tabs-x .tabs-header{border:1px solid #99f;background:url(images/background.gif) 0 -330px repeat-x;}
+.tabs-x .tabs-header-hover{background-position:0 -380px;}
+.tabs-x .tabs-header-selected{background-position:0 -280px;}
+.tabs-x .tabs-header span{background-repeat:no-repeat;background-position:right 0;}
+.tabs-x .tabs-header span span{background-position:0 0;}
+.tabs-close{background-image:url(../icons/cross-tabs.gif);}
+.tabs-x .header-foot{border-top:1px solid #99f;background:url(images/background.gif) 0 -304px repeat-x;}
+.tabs-x .tabs-header-bar .spin-btn{background-image:url(images/tabs_x_spin.gif);}
+.tabs-x .tabs-header-bar .spin-up{background-position:0 0;}
+.tabs-x .tabs-header-bar .spin-up-hover{background-position:-18px 0;}
+.tabs-x .tabs-header-bar .spin-down{background-position:0 -43px;}
+.tabs-x .tabs-header-bar .spin-down-hover{background-position:-18px -43px;}

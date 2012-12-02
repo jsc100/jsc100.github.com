@@ -1,0 +1,165 @@
+<style type="text/css">
+	.demo-body .demo-box{margin-top:20px;}
+	.tree-box{width:200px;height:300px;overflow:auto;border:1px solid #ccf;}
+</style>
+<div class="demo-body">
+	
+	<div class="demo-box">
+		<h4>normal</h4>
+		<div class="tree-box">
+			<ul id="tree01">
+				<li>
+					<span>item 1</span>
+					<ul>
+						<li>
+							<span>item 1-1</span>
+							<ul>
+								<li>
+									<span>item 1-1-1</span>
+									<ul>
+										<li>
+											<span>item 1-1-1-1</span>
+										</li>
+										<li>
+											<span>item 1-1-1-2</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>item 1-1-2</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>item 1-2</span>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span>item 2</span>
+				</li>
+			</ul>			
+		</div>
+	</div>
+	
+	<div class="demo-box">
+		<h4>no icon</h4>
+		<div class="tree-box">
+			<ul id="tree02">
+				<li>
+					<span>item 1</span>
+					<ul>
+						<li>
+							<span>item 1-1</span>
+							<ul>
+								<li>
+									<span>item 1-1-1</span>
+									<ul>
+										<li>
+											<span>item 1-1-1-1</span>
+										</li>
+										<li>
+											<span>item 1-1-1-2</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>item 1-1-2</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>item 1-2</span>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span>item 2</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="demo-box">
+		<h4>init open</h4>
+		<div class="tree-box">
+			<ul id="tree03">
+				<li>
+					<span>item 1</span>
+					<ul>
+						<li>
+							<span>item 1-1</span>
+							<ul>
+								<li>
+									<span>item 1-1-1</span>
+									<ul>
+										<li>
+											<span>item 1-1-1-1</span>
+										</li>
+										<li>
+											<span>item 1-1-1-2</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>item 1-1-2</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>item 1-2</span>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span>item 2</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="demo-box">
+		<h4>no line</h4>
+		<div class="tree-box">
+			<ul id="tree04">
+				<li>
+					<span>item 1</span>
+					<ul>
+						<li>
+							<span>item 1-1</span>
+							<ul>
+								<li>
+									<span>item 1-1-1</span>
+									<ul>
+										<li>
+											<span>item 1-1-1-1</span>
+										</li>
+										<li>
+											<span>item 1-1-1-2</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>item 1-1-2</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>item 1-2</span>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span>item 2</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+	$('#tree01').tree({radioOrCheckbox:'',click:function(jsc){alert(jsc.button.text())}});
+	$('#tree02').tree({radioOrCheckbox:'',iconCls:'',click:function(jsc){alert(jsc.button.text())}});
+	$('#tree03').tree({radioOrCheckbox:'',initOpen:true,closeSilbings:false,click:function(jsc){alert(jsc.button.text())}});
+	$('#tree04').tree({radioOrCheckbox:'',cls:'tree noline',click:function(jsc){alert(jsc.button.text())}});
+</script>

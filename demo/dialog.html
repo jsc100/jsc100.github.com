@@ -1,0 +1,27 @@
+<div id="dia" class="dialog"></div>
+<div id="dialog-ctrl"><a>显示</a><a>隐藏</a></div>
+<script>
+	var dia=dia||$('#dia').appendTo('body').dialog({
+		width:350,
+		height:250,
+		overlay:false,
+		collapsible:true,
+		fixed:true,
+		dragOpt:{proxy:false},
+		title:'对话框窗口',
+		btnIcon:'icon-right',
+		btnAlign:'center',
+		ajaxContent:{},
+		ctrlBtns:[
+			{icon:'icon-ok',text:'确定',click:function(jsc){this.dialog('close');}},
+			{icon:'icon-cancel',text:'取消',click:function(jsc){this.dialog('close');}}
+		]
+	});
+	$('#dialog-ctrl').button({selector:'a',click:function(jsc){
+		if(jsc.button.text()=='显示'){
+			dia.dialog('open');
+		}else{
+			dia.dialog('close');
+		}
+	}});
+</script>

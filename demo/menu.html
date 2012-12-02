@@ -1,0 +1,68 @@
+<style type="text/css">
+	.demo-menu-container .fieldset{display:inline-block;width:400px;height:300px;vertical-align:middle;}
+	.demo-menu-container .fieldset{*display:inline;}
+</style>
+<div class="demo-body demo-menu-container">
+	
+	<fieldset class="fieldset">
+    	<legend>
+            <span class="title">click</span>
+        </legend>
+        <div class="content">
+        	<div id="demo-menu-btn01" style="margin:10px 0 0 20px;">文件</div>
+        </div>
+    </fieldset>
+	<fieldset class="fieldset">
+    	<legend>
+            <span class="title">hover</span>
+        </legend>
+        <div class="content">
+        	<div id="demo-menu-btn02" style="margin:10px 0 0 20px;">文件</div>
+        </div>
+    </fieldset>
+
+    <ul id="demo-menu01">
+        <li><span class="icon-new">新建</span></li>
+        <li><span class="icon-open">打开</span></li>                
+        <li></li>                
+        <li><span class="icon-save">保存</span></li>                
+        <li><span class="">另存为</span></li>                
+        <li></li>                
+        <li><span class="icon-exit">退出</span></li>                
+    </ul>
+</div>
+<script type="text/javascript">
+	$('#demo-menu-btn01').menu({
+		buttonOpt:{cls:'button',icon:'icon-computer'},
+		data:'#demo-menu01',
+		width:[120,100]
+	});
+	$('#demo-menu-btn02').menu({
+		data:[
+			{text:'查看 ',sub:[{text:'大图标'},{text:'中等图标'},{text:'小图标'},{},{text:'自动排列图标'}]},
+			{text:'排序方式 ',sub:[{text:'名称'},{text:'大小'},{text:'项目类型'},{},{text:'修改日期'}]},
+			{text:'刷新'},
+			{},
+			{text:'复制',cls:'icon-copy'},
+			{text:'粘贴',cls:'icon-paste'},
+			{text:'撤销',cls:'icon-undo'},
+			{},
+			{text:'图形选项',sub:[{text:'屏幕适配',sub:[{text:'保持显示缩放比'}]},{text:'快捷键',sub:[{text:'启用'},{text:'禁用'}]},{text:'旋转',sub:[{text:'旋转至正常'},{text:'旋转至90度'},{text:'旋转至180度'},{text:'旋转至270度'}]}]},
+			{text:'图形属性…'}
+		],
+		attach:function(opt){
+			this.button({
+				keep:false,
+				icon:'icon-computer',
+				mouseenter:function(){
+					$$.$doc.mousedown();
+					opt.menu.popup('open');
+					$$.is('ie')&&opt.menu[0].fireEvent('onmove');
+				}
+			})
+		},
+		click:function(jsc){
+			$$.alert(jsc.button.text());
+		}
+	});
+</script>

@@ -1,0 +1,27 @@
+<style type="text/css">
+	.demo-slider-box{position:relative;display:inline-block;width:auto;margin:20px 50px 20px 0;vertical-align:middle;width:500px;height:300px;border:1px dashed #ccf;background:#efefef;}
+	.demo-slider-box{*display:inline;}
+	.demo-slider-input{width:80px;height:20px;border:1px solid #ccc;}
+</style>
+<div class="demo-body">
+	
+	<div class="demo-slider-box">
+		<h4>横向</h4>
+		<input id="input01" class="demo-slider-input" style="margin:20px 0 0 50px;">
+		<div id="slider01" style="width:200px;margin:20px 0 0 50px;"></div>
+	</div>
+	<div class="demo-slider-box">
+		<h4>纵向</h4>
+		<div id="slider02" style="height:200px;position:absolute;top:50px;left:50px;"></div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+    $(function(){
+		var input01=$('#input01');
+		var sl01=$('#slider01').slider({axis:'x',core:{max:5,value:1},spinOpt:{wrap:false},dragStep:true,action:function(val){input01.val(val);}});
+		input01.val(sl01.slider('option','core.value'));
+		
+		var sl02=$('#slider02').slider({axis:'y',core:{max:9,value:0},dragStep:false,spinOpt:{wrap:false,timer:{interval:10}},action:function(val){}});
+    });
+</script>

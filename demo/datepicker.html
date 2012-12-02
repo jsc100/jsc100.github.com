@@ -1,0 +1,36 @@
+<style type="text/css">
+	
+</style>
+<div class="demo-body">
+	
+	<div class="demo-box" style="margin-top:20px;">
+		<h4>无图标</h4>
+		<input id="dp3" type="text" value=""  style="width:170px;"/>
+	</div>
+	<div class="demo-box" style="margin-top:20px;">
+		<h4>有图标</h4>
+		<input id="dp2" type="text" value=""  style="width:170px;"/>
+	</div>
+	<div class="demo-box" style="margin-top:20px;">
+		<h4>默认初始时间</h4>
+		<input id="dp1" type="text" value="2012-11-10 11:22:10"  style="width:170px;"/>
+	</div>
+	<div class="demo-box" style="margin-top:20px;">
+		<h4>选择起止日期</h4>
+		<input id="dp4" type="text" value="" style="width:300px;"/>
+	</div>
+	<div class="demo-box" style="margin-top:20px;">
+		<h4>默认初始起止日期</h4>
+		<input id="dp" type="text" value="2011-05-11/2012-10-1" style="width:170px;"/>
+	</div>
+	
+</div>
+<script type="text/javascript">
+    $(function(){
+		$('#dp').datePicker({range:true});
+		$('#dp4').datePicker({range:true,pattern:'yyyy-MM-dd HH:mm:ss'});
+		$('#dp1').datePicker({pattern:'yyyy-MM-dd HH:mm:ss'});
+		$('#dp2').datePicker();
+		$('#dp3').datePicker({icon:''});
+     });
+</script>

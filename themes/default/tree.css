@@ -1,0 +1,38 @@
+/* author 王海洋 */
+@charset "utf-8";
+.tree{float:left;padding-left:5px;font-size:0;letter-spacing:-3px;}
+.tree li{display:block;min-height:20px;height:auto !important;height:20px;white-space:nowrap;}
+.tree span{display:inline-block;vertical-align:middle;}
+.tree .tree-node-hitarea{width:16px;height:16px;margin-left:-16px;}
+.subtree{padding-left:17px;}
+.tree .tree-node{display:inline-block;padding:2px 4px 2px 16px;vertical-align:middle;white-space:nowrap;}
+.tree .tree-title{display:inline-block;padding:0 2px;margin-left:2px;white-space:nowrap;line-height:16px;font-size:12px;letter-spacing:normal;}
+.tree .tree-node-hover .tree-title{text-decoration:underline;}
+.tree .tree-node-selected .tree-title{line-height:14px;}
+.tree .checkbox, .tree .tree-icon{height:16px;padding-left:16px;background-repeat:no-repeat;}
+
+/* skin default */
+.tree li{background:url(images/treeline1.gif) 0 0 repeat-y;}
+.tree li.item-last{background-image:none;}
+.tree .tree-node{background:url(images/treeline2.gif) 0 0 no-repeat;}
+.item-last .tree-node{background:url(images/treeline3.gif) 0 0 no-repeat;}
+.tree .tree-node-hitarea{background:url(images/treePlus.gif) 0 -2px no-repeat;}
+.tree-leaf .tree-node-hitarea{background:none;}
+.tree-node-expended .tree-node-hitarea{background:url(images/treeMinus.gif) 0 -2px no-repeat;}
+.tree .tree-title{color:#000;}
+.tree .tree-node-hover .tree-title{color:#36c;}
+.tree .tree-node-selected .tree-title{border:1px dotted #666;_border:1px solid #777;background-color:#2e70d0;color:#fff;}
+.tree .tree-folder{background-image:url(../icons/folder_close.gif);}
+.tree .tree-node-expended .tree-folder{background-image:url(../icons/folder_open.gif);}
+.tree .tree-leaf .tree-folder{background-image:url(../icons/doc.gif);}
+.tree .checkbox{background-image:url(../icons/checkbox-unchecked.gif);}
+.tree .tree-node-checked .checkbox{background-image:url(../icons/checkbox-checked.gif);}
+.tree .tree-node-checked-part .checkbox{background-image:url(../icons/checkbox-part.gif);}
+.tree .tree-loader{background:url(images/tree_loading.gif) 0 0 no-repeat;}
+
+.noline li, .noline .tree-node{background:none;}
+.noline .tree-node-hitarea{background:url(images/treePlus2.gif) 0 -2px no-repeat;}
+.noline .tree-node-hitarea-hover{background:url(images/treePlus2_hover.gif) 0 -2px no-repeat;}
+.noline .tree-node-expended .tree-node-hitarea{background:url(images/treeMinus2.gif) 0 -2px no-repeat;}
+.noline .tree-node-expended .tree-node-hitarea-hover{background:url(images/treeMinus2_hover.gif) 0 -2px no-repeat;}
+.noline .tree-leaf .tree-node-hitarea{background:none;}

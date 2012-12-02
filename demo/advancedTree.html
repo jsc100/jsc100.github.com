@@ -1,0 +1,105 @@
+<style type="text/css">
+	.demo-body .demo-box{margin-top:20px;}
+	.tree-box{width:200px;height:300px;overflow:auto;border:1px solid #ccf;}
+</style>
+<div class="demo-body">
+	
+	<div class="demo-box">
+		<h4>custom icom</h4>
+		<div class="tree-box">
+			<ul id="tree05">
+				<li>
+					<span class="icon-ui-tabs">item 1</span>
+					<ul>
+						<li>
+							<span class="icon-ui-dialog">item 1-1</span>
+							<ul>
+								<li>
+									<span class="icon-ui-datepicker">item 1-1-1</span>
+									<ul>
+										<li>
+											<span class="icon-ui-slider">item 1-1-1-1</span>
+										</li>
+										<li>
+											<span class="">item 1-1-1-2</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span class="">item 1-1-2</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span class="">item 1-2</span>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span class="">item 2</span>
+				</li>
+			</ul>			
+		</div>
+	</div>
+	
+	<div class="demo-box">
+		<h4>checkbox</h4>
+		<div class="tree-box">
+			<ul id="tree06">
+				<li>
+					<span>item 1</span>
+					<ul>
+						<li>
+							<span>item 1-1</span>
+							<ul>
+								<li>
+									<span>item 1-1-1</span>
+									<ul>
+										<li>
+											<span>item 1-1-1-1</span>
+										</li>
+										<li>
+											<span>item 1-1-1-2</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<span>item 1-1-2</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>item 1-2</span>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<span>item 2</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="demo-box">
+		<h4>from data</h4>
+		<div class="tree-box">
+			<ul id="tree07">
+			</ul>
+		</div>
+	</div>
+	
+	<div class="demo-box">
+		<h4>ajax</h4>
+		<div class="tree-box">
+			<ul id="tree08">
+			</ul>
+		</div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+	$('#tree05').tree({radioOrCheckbox:'',click:function(jsc){alert(jsc.button.text())}});
+	$('#tree06').tree({click:function(jsc){alert(jsc.button.text())}});
+	$('#tree07').tree({radioOrCheckbox:'',data:[{text:'root',id:0,isLeaf:false,children:[{text:'item 1'},{text:'item 2'}]}],click:function(jsc){alert(jsc.button.text())}});
+	$('#tree08').tree({radioOrCheckbox:'',ajax:{url:'demo/tree.json'},click:function(jsc){alert(jsc.button.text())}});
+</script>

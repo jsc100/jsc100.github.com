@@ -1,0 +1,46 @@
+/* author 王海洋 */
+@charset "utf-8";
+/* jsc.css */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;resize:none;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,steong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+a,a:facus{outline:none;text-decoration:none;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-block;}
+*html.clearfix{height:1%;}
+.clearfix{display:block;}
+body{font:12px/1.5 helvetica,tahoma,verdana,"\5b8b\4f53",sans-serif;}
+label{display:inline-block;margin:0;padding:0;vertical-align:middle;}
+.ellipsis{_width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.gray{filter:gray;}
+.disabled{color:#999;cursor:default;filter:alpha(opacity=40) gray;opacity:0.4;}/*cursor:not-allowed;*/
+* html{background-image:url(about:blank);background-attachment:fixed;}
+.overlay{background-color:#000;_background-color:none;filter:alpha(opacity=40);_filter:none;opacity:.4;}
+	.overlay div{width:100%;height:100%;background-color:#000;filter:alpha(opacity=40);}
+	.overlay iframe{display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:-1;filter:Alpha(Opacity=0);}
+.mask-ie6{position:absolute;overflow:hidden;}
+	.mask-ie6 div{width:100%;height:100%;}
+	.mask-ie6 iframe{display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:-1;filter:Alpha(Opacity=1);}
+.proxy-drag{_padding:1px;filter:alpha(opacity=60);_filter:none;opacity:.6;overflow:hidden;}
+	.proxy-drag div{position:absolute;top:0;left:0;z-index:1;width:100%;filter:alpha(opacity=60);overflow:hidden;}
+	.proxy-drag iframe{display:block;position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;padding:1px;filter:Alpha(Opacity=0);}
+.message{width:150px;height:auto;padding:5px;line-height:22px;text-align:center;}
+.loader-ajax{width:100px;height:30px;}
+.loader-ajax .background{width:100%;height:100%;filter:alpha(opacity=60);opacity:.6;}
+.loader-ajax .content{position:absolute;top:5px;left:5px;width:90px;height:20px;text-indent:24px;line-height:20px;white-space:nowrap;}
+
+/* jsc.css */
+.proxy-drag{border:1px solid #03c;_border:0 none;background-color:#93b3cc;_background-color:none;}
+.proxy-drag div{border:1px solid #03c;background-color:#93b3cc;}
+.select-touched,.select-selected{background-color:#7787ff;}
+.placeholder-drop{border:1px dotted #000;}
+.message{border:1px solid #99BBE8;background:#d4e8fe;}
+.loader-ajax{border:1px solid #8be;}
+.loader-ajax .background{background-color:#cfdff3;}
+.loader-ajax .content{background:url(images/loading.gif) 0 0 no-repeat;color:#666;}

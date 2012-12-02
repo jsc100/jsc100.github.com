@@ -1,0 +1,63 @@
+<style type="text/css">
+	.demo-slider-box{position:relative;display:inline-block;width:auto;margin:20px 50px 20px 0;vertical-align:middle;width:500px;height:300px;border:1px dashed #ccf;background:#efefef;}
+	.demo-slider-box{*display:inline;}
+	.demo-slider-container{margin:20px 0 0 50px;height:16px;}
+	.demo-slider-container .t{display:inline-block;width:16px;height:16px;position:relative;top:-16px;}
+	.demo-slider{width:285px;margin-left:20px;}
+</style>
+<div class="demo-body">
+
+	<div class="demo-slider-box">
+		<h4>调色器</h4>
+		<div id="colorBox" style="width:150px;height:120px;margin:5px 0 35px 50px;border:1px dashed #666;background-color:rgb(255,255,255);"></div>
+		<div id="colorVal" style="position:absolute;top:60px;left:230px;width:100px;height:auto;line-height:26px;font-size:14px;letter-spacing:1px;">
+			R:<span id="rval" style="color:#f00;"></span><br />
+			G:<span id="gval" style="color:#0f0;"></span><br />
+			B:<span id="bval" style="color:#00f;"></span><br />
+			<span id="ohval"></span>
+		</div>
+		<div class="demo-slider-container">
+			<div id="slider03" class="demo-slider"></div>
+			<span class="t">R</span>
+		</div>
+		<div class="demo-slider-container">
+			<div id="slider04" class="demo-slider"></div>
+			<span class="t">G</span>
+		</div>
+		<div class="demo-slider-container">
+			<div id="slider05" class="demo-slider"></div>
+			<span class="t">B</span>
+		</div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+    $(function(){
+		var colorBox=$('#colorBox');
+		var sl03=$('#slider03').slider({axis:'x',core:{max:255,value:255},dragStep:true,action:function(val){r=val;setColor(r,g,b);}});
+		var sl04=$('#slider04').slider({axis:'x',core:{max:255,value:50},dragStep:true,action:function(val){g=val;setColor(r,g,b);}});
+		var sl05=$('#slider05').slider({axis:'x',core:{max:255,value:160},dragStep:true,action:function(val){b=val;setColor(r,g,b);}});
+		var r,g,b,rval=$('#rval'),gval=$('#gval'),bval=$('#bval'),ohval=$('#ohval');
+		function setColor(r,g,b){
+			colorBox.css('background-color','rgb('+r+','+g+','+b+')');
+			rval.text(r);
+			gval.text(g);
+			bval.text(b);
+			var oh='#'+to16(r)+to16(g)+to16(b);
+			ohval.text(oh);
+		}
+		function to16(n){
+			if(n==0||n==1||n==2||n==3||n==4||n==5||n==6||n==7||n==8||n==9){
+				return '0'+n;
+			}else if(n==10||n==11||n==12||n==13||n==14||n==15){
+				return '0'+n.toString(16);
+			}else{
+				return n.toString(16);
+			}
+		}
+		r=sl03.slider('option','core.value');
+		g=sl04.slider('option','core.value');
+		b=sl05.slider('option','core.value');
+		setColor(r,g,b);
+    });
+</script>

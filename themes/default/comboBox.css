@@ -1,0 +1,35 @@
+﻿/* author 王海洋 */
+@charset "utf-8";
+.comboBox{position:relative;height:20px;line-height:16px;font-size:12px;}
+.comboBox span{display:block;height:16px;overflow:hidden;background-repeat:no-repeat;}
+.combo-icon{padding-left:18px;}
+.combo-arrow{padding:2px 18px 2px 2px;}
+.combo-arrow-hover{}
+.combo-arrow-selected{}
+.comboBox input{height:16px;margin:0;padding:0;line-height:18px;font-size:12px;vertical-align:middle;}
+
+.combo-dropdown{display:none;position:absolute;top:20px;left:-1px;overflow:auto;box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);}
+.combo-item{display:block;cursor:pointer;padding:4px 2px;overflow:hidden;vertical-align:middle;white-space:nowrap;}
+.combo-item-selected{}
+.combo-item-hover{}
+.combo-list{font-size:0;letter-spacing:-3px;}
+.combo-list ul li .combo-item{padding-left:20px;}
+.combo-list .checkbox, .combo-list .combo-icon{display:inline-block;height:16px;padding-left:18px;background-repeat:no-repeat;vertical-align:middle;}
+.combo-title{display:inline-block;padding:0 2px;margin-left:2px;white-space:nowrap;line-height:16px;font-size:12px;letter-spacing:normal;vertical-align:middle;}
+.combo-group{padding:4px 2px 2px;font-weight:bold;}
+
+.combo-list .checkbox{background-image:url(../icons/checkbox-unchecked.gif);}
+.combo-list .tree-node-checked .checkbox{background-image:url(../icons/checkbox-checked.gif);}
+.combo-list .tree-node-checked-part .checkbox{background-image:url(../icons/checkbox-part.gif);}
+
+/* skin default */
+.comboBox{border:1px solid #b5b8c8;background:url(images/background.gif) 0 -649px repeat-x;}
+.combo-arrow{background:url(images/trigger.gif) right 0 no-repeat;}
+.combo-arrow-hover{background:url(images/trigger.gif) right -23px no-repeat;}
+.combo-arrow-selected{background:url(images/trigger.gif) 0 -115px no-repeat;}
+.comboBox input{border:0;background:transparent;}
+
+.combo-dropdown{border:1px solid #98c0f4;background-color:#ffe;}
+.combo-item{color:#666;background-color:#ffe;}
+.combo-item-selected{background-color:#b1cdf7;}
+.combo-item-hover{background-color:#dfe8f6;}

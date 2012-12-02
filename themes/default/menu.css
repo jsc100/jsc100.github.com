@@ -1,0 +1,20 @@
+﻿/* author 王海洋 */
+@charset "utf-8";
+.menu{padding:2px;box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);}
+.menu .menu-item{display:block;position:relative;height:16px;padding:4px;overflow:visible;}
+.menu .menu-item-sep{height:5px;margin:0 0 3px 27px;overflow:hidden;font-size:0;}
+.menu-noicon .menu-item-sep{margin-left:0;}
+.menu-item span{display:block;height:16px;overflow:hidden;background-repeat:no-repeat;line-height:18px;_line-height:20px;font-size:12px;}
+.menu-item .menu-icon{padding-left:26px;}
+.menu-item .submenu-tip{padding-right:20px;}
+.menu .menu-item-hover{padding:3px;}
+
+/* skin default */
+.menu{border:1px solid #97b0d9;background:url(images/toolbar_line.gif) 26px 0 repeat-y #f0f0f0;}
+.menu-noicon{background-position:-100px 0;}
+.menu .menu-item{border:none;}
+.menu .menu-item-sep{background:url(images/menu_line.gif) 0 3px repeat-x;}
+.menu-item span{color:#039;}
+.menu-item .tip-arrow{background:url(images/icon-tool.png) right -1800px no-repeat;}
+.menu .menu-item-hover{border:1px solid #aaccf6;background:url(images/background.gif) 0 -730px repeat-x;}
+

@@ -1,0 +1,42 @@
+<style type="text/css">
+	.demo-layout-box{width:500px;height:400px;background-color:#def;border:1px solid #ccf;display:inline-block;margin:20px 20px 0 0;}
+	.demo-layout-box{*display:inline;}
+	.demo-layout-box .bar-collapsed-left, .demo-layout-box .bar-collapsed-right{margin:0 5px;}
+	.demo-layout-box .bar-collapsed-top, .demo-layout-box .bar-collapsed-bottom{margin:5px;}
+</style>
+<div class="demo-body">
+	
+    <div class="demo-layout-box">
+        <div id="demo-layout-01" class="layout">        
+            <div id="demo-layout-01-top" class="top" style="height:100px;margin:5px 5px 0;"></div>
+            <div id="demo-layout-01-middle" class="middle">
+                <div id="demo-layout-01-left" class="left" style="width:200px;margin:0 0 0 5px;"></div>
+                <div id="demo-layout-01-center" class="center"></div>
+                <div id="demo-layout-01-right" class="right" style="width:100px;margin:0 5px 0 0;"></div>
+            </div>
+            <div id="demo-layout-01-bottom" class="bottom" style="height:100px;margin:0 5px 5px;"></div>
+        </div>
+    </div>	
+	
+    <div class="demo-layout-box">
+        <div id="demo-layout-02" class="layout">        
+            <div id="demo-layout-02-top" class="top" style="height:100px;margin:5px 5px 0;"></div>
+            <div id="demo-layout-02-middle" class="middle">
+                <div id="demo-layout-02-left" class="left" style="width:200px;margin:0 0 0 5px;"></div>
+                <div id="demo-layout-02-center" class="center"></div>
+                <div id="demo-layout-02-right" class="right" style="width:100px;margin:0 5px 0 0;"></div>
+            </div>
+            <div id="demo-layout-02-bottom" class="bottom" style="height:100px;margin:0 5px 5px;"></div>
+        </div>
+    </div>	
+	
+</div>
+<script type="text/javascript">
+    $(function(){
+		$('#demo-layout-01').fitParent().layout();
+		$('#demo-layout-01-middle').layout({initClosed:false,axis:'x'});
+		
+		$('#demo-layout-02').fitParent().layout({Collapsable:true});
+		$('#demo-layout-02-middle').layout({axis:'x',Collapsable:true,left:{initClosed:true}});
+    });
+</script>

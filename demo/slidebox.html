@@ -1,0 +1,56 @@
+<style type="text/css">
+	.scroller2{width:990px;height:400px;margin:20px 20px 0 0;position:relative;}
+	
+	.scroller2 .scroll-tip{width:200px;height:30px;position:absolute;bottom:20px;right:10px;text-align:center;}
+	.scroller2 .scroll-tip span{display:inline-block;height:30px;width:30px;margin:0 5px;text-align:center;font-size:14px;overflow:hidden;background-color:#963;color:#fff;line-height:30px;}
+	.scroller2 .scroll-tip span.selected{background-color:#000;}
+
+	.scroller2 .spin-btn{display:block;width:50px;height:80px;top:160px;position:absolute;background-image:none;background-color:#000;color:#fff;font-family:'宋体';line-height:82px;text-align:center;overflow:hidden;font-size:60px;filter:alpha(opacity=40);opacity:.4;}
+	.scroller2 .spin-up-hover,.scroller2 .spin-down-hover{filter:alpha(opacity=60);opacity:.6;}
+	.scroller2 .spin-up{right:20px;}
+	.scroller2 .spin-down{left:20px;}
+	
+	.scroller2 .scroller-view{width:990px;height:400px;margin:0 auto;position:relative;font-size:0;letter-spacing:-3px;}
+	.scroller2 .scroller-view ul li{display:inline-block;width:990px;height:400px;overflow:hidden;}
+	.scroller2 .scroller-view ul li{*display:inline;}
+	.scroller2 .scroller-view ul li img{display:block;border:0 none;}
+</style>
+<div class="demo-body">
+	
+	<div class="scroller2">
+	    <ul class="scroller-track">
+	        <li><img src="demo/images/p3/pic01.jpg" /></li>
+	    	<li><img src="demo/images/p3/pic00.jpg" /></li>
+	        <li><img src="demo/images/p3/pic02.jpg" /></li>
+	        <li><img src="demo/images/p3/pic03.jpg" /></li>
+	    </ul>
+	    <div class="scroll-tip">
+	        <span class="selected">1</span>
+	        <span>2</span>
+	        <span>3</span>
+	        <span>4</span>
+	    </div>
+	</div>
+
+</div>
+<script type="text/javascript">
+	var tip2=$('.scroller2 .scroll-tip>span'),scroller2=$('.scroller2').scrollable({
+		axis:'x',
+		cls:'',
+		viewCls:'scroller-view',
+		trackCls:'scroller-track',
+		showSpin:'hover',
+		autoScroll:true,
+		revert:true,
+		duration:1000,
+		timer:{interval:2000},
+		spinOpt:{wrap:false,up:{text:'>'},down:{text:'<'}},
+		action:function(jsc){
+			var len=this.scrollable('option','itemLen');
+			tip2.removeClass('selected').eq(jsc.value/len).addClass('selected');
+		}
+	});
+	tip2.css('cursor','pointer').mouseenter(function(){
+		scroller2.scrollable('scrollTo',$(this).index());
+	});
+</script>

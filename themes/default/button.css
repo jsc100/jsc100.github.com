@@ -1,0 +1,28 @@
+﻿/* author 王海洋 */
+@charset "utf-8";
+.button-group{display:inline-block;width:auto;height:22px;padding-left:6px;font-size:0;letter-spacing:-3px;}
+.button-group{*display:inline;}
+.button{display:inline-block;height:16px;margin-right:6px;padding:2px 4px;border-radius:3px;-webkit-border-radius:3px;overflow:hidden;font-family:tahoma,sans-serif;line-height:14px;line-height:18px\9;_line-height:14px;font-size:12px;letter-spacing:normal;vertical-align:middle;}
+:root .button{font-family:helvetica,sans-serif \0/IE9;}
+.button{*font-family:helvetica,sans-serif;_font-family:tahoma,sans-serif;}
+.button span{display:inline-block;height:12px;padding:2px 0;_padding:1px 0 3px 0;overflow:hidden;background-repeat:no-repeat;line-height:10px;_line-height:12px;_vertical-align:top;}
+:root .button span{line-height:14px \0/IE9;}
+.button, .button span{*display:inline;}
+.button-hover{}
+.button-press{padding:3px 3px 1px 5px;}
+.button .icon-left{padding-left:20px;background-position:0 0;overflow:hidden;}
+.button .icon-right{padding-right:20px;background-position:right 0;overflow:hidden;}
+.button .icon-only{padding-left:16px;}
+
+.toolbar{min-height:24px;height:auto !important;height:24px;padding:2px 2px 0;font-size:0;letter-spacing:-3px;}
+.toolbar .button-group{padding:0px 2px;margin-bottom:2px;overflow:hidden;}
+.toolbar .button{float:left;padding:2px 4px;margin-right:4px;}
+
+/* button.css */
+.button{border:1px solid #c9c9c9;background:url(images/background.gif) 0 -608px repeat-x;color:#333;}
+.button-hover{border-color:#aac8f1;background-position:0 -628px;}
+.button-selected{border-color:#aac8f1;background-position:0 -880px;}
+.toolbar{border-bottom:1px solid #b8b8b8;background:url(images/background.gif) 0 -430px repeat-x;}
+.toolbar .button-group{background:url(images/background.gif) right -560px no-repeat;}
+.toolbar .button{border:1px solid transparent;_border-color:tomato;_filter:chroma(color=tomato);color:#666;background-position:0 100px;}
+.toolbar .button-hover{border:1px solid #96b7e4;color:#000;background-position:0 -580px;}

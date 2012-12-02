@@ -1,0 +1,58 @@
+<style type="text/css">
+	.scroller{position:absolute;top:50%;left:50%;width:700px;height:300px;margin:-150px 0 0 -350px;}
+	
+	.scroller .scroll-tip{width:100%;height:14px;padding-top:14px;position:absolute;bottom:0;left:0;text-align:center;}
+	.scroller .scroll-tip span{display:inline-block;height:12px;width:12px;margin:0 5px;overflow:hidden;background:url(demo/images/index_banner/pagination.gif) 0 0 no-repeat;}
+	.scroller .scroll-tip span.selected{background-position:0 -12px;}
+
+	.scroller .spin-btn{display:block;width:40px;height:60px;top:108px;position:absolute;background-image:none;background-color:#000;color:#fff;font-family:'宋体';line-height:62px;text-align:center;overflow:hidden;font-size:60px;filter:alpha(opacity=20);opacity:.2;}
+	.scroller .spin-up-hover,.scroller .spin-down-hover{filter:alpha(opacity=40);opacity:.4;}
+	.scroller .spin-up{right:10px;}
+	.scroller .spin-down{left:10px;}
+	
+	.scroller .scroller-view{width:700px;height:272px;margin:0 auto;position:relative;font-size:0;letter-spacing:-3px;}
+	.scroller .scroller-view ul li{display:inline-block;width:700px;height:272px;overflow:hidden;}
+	.scroller .scroller-view ul li{*display:inline;}
+	.scroller .scroller-view ul li img{display:block;border:0 none;}
+</style>
+<div class="scroller">
+    <ul class="scroller-track">
+        <li><img src="demo/images/index_banner/banner00.jpg" /></li>
+        <li><img src="demo/images/index_banner/banner01.jpg" /></li>
+        <li><img src="demo/images/index_banner/banner02.jpg" /></li>
+        <li><img src="demo/images/index_banner/banner03.jpg" /></li>
+        <li><img src="demo/images/index_banner/banner04.jpg" /></li>
+    </ul>
+    <div class="scroll-tip">
+        <span class="selected"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<script type="text/javascript">
+	var tip=$('.scroller .scroll-tip>span'),scroller=$('.scroller').scrollable({
+		axis:'x',
+		cls:'',
+		viewCls:'scroller-view',
+		trackCls:'scroller-track',
+		showSpin:'hover',
+		autoScroll:true,
+		duration:1000,
+		timer:{interval:5000},
+		spinOpt:{wrap:false,up:{text:'>'},down:{text:'<'}},
+		action:function(jsc){
+			var len=this.scrollable('option','itemLen');
+			tip.removeClass('selected').eq(jsc.value/len).addClass('selected');
+		}
+	});
+</script>
+
+
+
+
+
+
+
+

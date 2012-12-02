@@ -1,0 +1,52 @@
+<style type="text/css">
+	.demo-spin-box{position:relative;display:inline-block;width:auto;margin:20px 50px 20px 0;vertical-align:middle;width:500px;height:300px;border:1px dashed #ccf;background:#efefef;}
+	.demo-spin-box{*display:inline;}
+</style>
+<div class="demo-body">
+	
+	<div class="demo-spin-box">
+		<h4>basic</h4>
+	    <input id="spin3" type="text" style="width:78px;" />
+	</div>
+	<div class="demo-spin-box">
+		<h4>rotate</h4>
+	    <input id="spin4" type="text" style="width:78px;" />
+	</div>
+	<div class="demo-spin-box">
+		<h4>spin 联动</h4>
+	    <input id="spin1" type="text" style="width:78px;" />
+		<div id='spin2' style="width:78px;">
+	        <input type="text" value="1" style="width:60px;"/>
+		</div>
+	</div>	
+	
+</div>
+<span id="spinBox" class="spin-box">
+	<a class="spin-btn spin-up"></a>
+	<a class="spin-btn spin-down"></a>
+</span>				
+<script type="text/javascript">
+	var spin2=$('#spin2').spin({
+		cls:'spin spinner',
+		context:'#spinBox',
+		rotate:true,
+		core:{min:1,max:12,value:1},
+		action:function(jsc){
+			var input=spin2.find('input');
+			input.val(jsc.value);
+			if(jsc.toggle!=0){
+				var v=spin1.spinner('val');
+				spin1.spinner('val',v+jsc.toggle);
+			}
+		}
+	});
+	var box=$('#spinBox');
+	var pos=box.posBy({by:'#spin2>input'});
+	box.setPos(box.posBy({pos:pos,by:'#spin2>input',mode:'margin',side:'right'}));
+	var spin1=$('#spin1').spinner({
+		rotate:true,
+		core:{min:1,max:12,value:1}
+	});
+	$('#spin3').spinner({core:{min:1,max:10,value:1}});
+	$('#spin4').spinner({rotate:true,core:{min:1,max:10,value:1}});
+</script>

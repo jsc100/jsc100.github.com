@@ -1,0 +1,31 @@
+/* author 王海洋 */
+@charset "utf-8";
+.accordion .accordion-header{display:block;height:16px;padding:4px;overflow:hidden;line-height:16px;line-height:18px\9;}
+.accordion-header span{display:block;height:16px;overflow:hidden;}
+.accordion-header .icon-left{padding-left:24px;}
+.accordion-header .icon-right{*position:relative;*top:-1px;padding-right:24px;}
+.accordion-header-hover{}
+.accordion-body{}
+.spin-show .scroll-view{margin:10px 0;}
+.accordion .spin-btn{position:absolute;left:0;width:100%;height:10px;overflow:hidden;}
+.accordion .spin-up{top:0;}
+.accordion .spin-down{bottom:0;}
+.accordion .spin-up-hover, .accordion .spin-down-hover{}
+
+/* skin default */
+.accordion{border:1px solid #99f;border-top-width:0;}
+.accordion-header{border-top:1px solid #99f;background:url(images/background.gif) 0 -159px repeat-x;}
+.accordion-header span{background-repeat:no-repeat;}
+.accordion-header .icon-left{background-position:0 0;}
+.icon-accordion-tip{background:url(images/icon-tool.png) right -1440px no-repeat;}
+.accordion-header-selected .icon-accordion-tip{background:url(images/icon-tool.png) right -1500px no-repeat;}
+.icon-accordion-tip-left{background:url(images/icon-tool.png) left -1440px no-repeat;}
+.accordion-header-selected .icon-accordion-tip-left{background:url(images/icon-tool.png) left -1500px no-repeat;}
+.accordion-header-hover{background-position:0 -100px;}
+.accordion-header-selected{font-weight:bold;background-position:0 -508px;}
+.accordion-body{border-top:1px solid #99f;background-color:#fff;}
+.accordion .spin-btn{filter:alpha(opacity=60);opacity:.6;}
+.accordion .spin-up{background:url(images/layout-button-top.gif) center 3px no-repeat #8295ae;}
+.accordion .spin-down{background:url(images/layout-button-bottom.gif) center 2px no-repeat #8295ae;}
+.accordion .spin-up-hover, .accordion .spin-down-hover{filter:alpha(opacity=100);opacity:1;}
+

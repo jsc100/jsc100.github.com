@@ -1,0 +1,14 @@
+<style type="text/css">
+	
+</style>
+<div id="btn">
+	<a id="alert">alert</a>
+	<a id="confirm">confirm</a>
+	<a id="prompt">prompt</a>		
+</div>
+<script type="text/javascript">
+	$('#btn').button({selector:'>a'});
+	$('#alert').button({icon:'icon-exclamation',click:function(){$$.alert('dfasfsdf');}});
+	$('#confirm').button({icon:'icon-comment',click:function(){$$.confirm('dfasfsdf');}});
+	$('#prompt').button({icon:'icon-help',click:function(){$$.prompt('dfasfsdf');}});
+</script>

@@ -1,0 +1,352 @@
+﻿/* author 王海洋 */
+@charset "utf-8";
+/* jsc.css */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;resize:none;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,steong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+a,a:facus{outline:none;text-decoration:none;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-block;}
+*html.clearfix{height:1%;}
+.clearfix{display:block;}
+body{font:12px/1.5 helvetica,tahoma,verdana,"\5b8b\4f53",sans-serif;}
+label{display:inline-block;margin:0;padding:0;vertical-align:middle;}
+.ellipsis{_width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.gray{filter:gray;}
+.disabled{color:#999;cursor:default;filter:alpha(opacity=40) gray;opacity:0.4;}/*cursor:not-allowed;*/
+* html{background-image:url(about:blank);background-attachment:fixed;}
+.overlay{background-color:#000;_background-color:none;filter:alpha(opacity=40);_filter:none;opacity:.4;}
+	.overlay div{width:100%;height:100%;background-color:#000;filter:alpha(opacity=40);}
+	.overlay iframe{display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:-1;filter:Alpha(Opacity=0);}
+.mask-ie6{position:absolute;overflow:hidden;}
+	.mask-ie6 div{width:100%;height:100%;}
+	.mask-ie6 iframe{display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:-1;filter:Alpha(Opacity=1);}
+.proxy-drag{_padding:1px;filter:alpha(opacity=60);_filter:none;opacity:.6;overflow:hidden;}
+	.proxy-drag div{position:absolute;top:0;left:0;z-index:1;width:100%;filter:alpha(opacity=60);overflow:hidden;}
+	.proxy-drag iframe{display:block;position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;padding:1px;filter:Alpha(Opacity=0);}
+.message{width:150px;height:auto;padding:5px;line-height:22px;text-align:center;}
+.loader-ajax{width:100px;height:30px;}
+.loader-ajax .background{width:100%;height:100%;filter:alpha(opacity=60);opacity:.6;}
+.loader-ajax .content{position:absolute;top:5px;left:5px;width:90px;height:20px;text-indent:24px;line-height:20px;white-space:nowrap;}
+
+/* fieldset.css */
+.fieldset{padding:8px;}
+.fieldset_c{padding-bottom:0;overflow:hidden;}
+.fieldset_c .content{display:none;}
+.fieldset legend{height:16px;padding:2px;line-height:16px;}
+.fieldset legend .icon{display:inline-block;width:15px;height:15px;overflow:hidden;vertical-align:top;float:left;}
+.fieldset legend .title{display:inline-block;padding-left:4px;font-size:12px;}
+
+/* layout.css */
+.layout{position:relative;overflow:hidden;}
+.top, .bottom, .left, .right, .center{}
+.bar-resize-top, .bar-resize-bottom{height:5px;margin:0 5px;}
+.bar-resize-top-none, .bar-resize-bottom-none{height:0px;}
+	.bar-resize-top .button-close, .bar-resize-bottom .button-close{display:block;width:35px;height:5px;margin:0 auto;}
+.bar-resize-left, .bar-resize-right{width:5px;}
+	.bar-resize-left .button-close, .bar-resize-right .button-close{display:block;position:absolute;left:0;top:50%;width:5px;height:35px;margin-top:-16px;}
+.layout-proxy-drag{overflow:hidden;}
+	.layout-proxy-drag div{position:absolute;top:0;left:0;z-index:1;width:100%;overflow:hidden;}
+	.layout-proxy-drag iframe{display:block;position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;padding:1px;filter:Alpha(Opacity=0);}
+.button-close-top{}
+.button-close-bottom{}
+.button-close-left{}
+.button-close-right{}
+.bar-collapsed{padding:3px;}
+.bar-collapsed-top{border-bottom:none;}
+.bar-collapsed-bottom{border-top:none;}
+.bar-collapsed-left{border-rgiht:none;}
+.bar-collapsed-right{border-left:none;}
+.bar-collapsed-top, .bar-collapsed-bottom{height:15px;text-align:right;}
+.bar-collapsed-left, .bar-collapsed-right{width:15px;}
+.bar-collapsed .button-close, .panel-header .button-close{display:inline-block;width:15px;height:15px;overflow:hidden;}
+.bar-collapsed .button-close-bottom, .panel-header .button-close-bottom{}
+.bar-collapsed .button-close-bottom-hover, .panel-header .button-close-bottom-hover{}
+.bar-collapsed .button-close-top, .panel-header .button-close-top{}
+.bar-collapsed .button-close-top-hover, .panel-header .button-close-top-hover{}
+.bar-collapsed .button-close-right, .panel-header .button-close-right{}
+.bar-collapsed .button-close-right-hover, .panel-header .button-close-right-hover{}
+.bar-collapsed .button-close-left, .panel-header .button-close-left{}
+.bar-collapsed .button-close-left-hover, .panel-header .button-close-left-hover{}
+
+/* button.css */
+.button-group{display:inline-block;width:auto;height:22px;padding-left:6px;font-size:0;letter-spacing:-3px;}
+.button-group{*display:inline;}
+.button{display:inline-block;height:16px;margin-right:6px;padding:2px 4px;border-radius:3px;-webkit-border-radius:3px;overflow:hidden;font-family:tahoma,sans-serif;line-height:14px;line-height:18px\9;_line-height:14px;font-size:12px;letter-spacing:normal;vertical-align:middle;}
+:root .button{font-family:helvetica,sans-serif \0/IE9;}
+.button{*font-family:helvetica,sans-serif;_font-family:tahoma,sans-serif;}
+.button span{display:inline-block;height:12px;padding:2px 0;_padding:1px 0 3px 0;overflow:hidden;background-repeat:no-repeat;line-height:10px;_line-height:12px;_vertical-align:top;}
+:root .button span{line-height:14px \0/IE9;}
+.button, .button span{*display:inline;}
+.button-hover{}
+.button-press{padding:3px 3px 1px 5px;}
+.button .icon-left{padding-left:20px;background-position:0 0;overflow:hidden;}
+.button .icon-right{padding-right:20px;background-position:right 0;overflow:hidden;}
+.button .icon-only{padding-left:16px;}
+
+.toolbar{min-height:24px;height:auto !important;height:24px;padding:2px 2px 0;font-size:0;letter-spacing:-3px;}
+.toolbar .button-group{padding:0px 2px;margin-bottom:2px;overflow:hidden;}
+.toolbar .button{float:left;padding:2px 4px;margin-right:4px;}
+
+/* panel.css */
+.panel{overflow:hidden;}
+.panel-body{overflow:auto;}
+.panel-header{position:relative;height:16px;padding:4px;-webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;}
+.panel-header span{display:block;}
+.panel-header-icon{position:absolute;top:4px;left:4px;width:16px;height:16px;margin-right:4px;}
+.panel-header-title{height:16px;overflow:hidden;line-height:16px;line-height:18px\9;font-size:12px;font-weight:bold;}
+.panel-header .tool-box{position:absolute;top:4px;right:4px;height:15px;margin:1px 0 0 4px;overflow:hidden;}
+.header-tool{display:inline-block;width:15px;height:15px;margin-left:2px;overflow:hidden;}
+.header-tool{*display:inline;}
+.panel-bar{min-height:24px;height:auto !important;height:24px;padding-bottom:2px;}
+.dialog{border-radius:5px;box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);-webkit-box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);-moz-box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);}
+.dialog-bar-control{height:26px;padding:6px 0;}
+
+.prompt, .alert, .confirm{padding:10px 10px 10px 60px;line-height:20px;min-height:40px;height:auto !important;height:40px;overflow:hidden;}
+.prompt input{margin-top:4px;width:100%;height:20px;line-height:20px;}
+
+/* comboBox.css */
+.comboBox{position:relative;height:20px;line-height:16px;font-size:12px;}
+.comboBox span{display:block;height:16px;overflow:hidden;background-repeat:no-repeat;}
+.combo-icon{padding-left:18px;}
+.combo-arrow{padding:2px 18px 2px 2px;}
+.combo-arrow-hover{}
+.combo-arrow-selected{}
+.comboBox input{height:16px;margin:0;padding:0;line-height:18px;font-size:12px;vertical-align:middle;}
+
+.combo-dropdown{display:none;position:absolute;top:20px;left:-1px;overflow:auto;box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);}
+.combo-item{display:block;cursor:pointer;padding:4px 2px;overflow:hidden;vertical-align:middle;white-space:nowrap;}
+.combo-item-selected{}
+.combo-item-hover{}
+.combo-list{font-size:0;letter-spacing:-3px;}
+.combo-list ul li .combo-item{padding-left:20px;}
+.combo-list .checkbox, .combo-list .combo-icon{display:inline-block;height:16px;padding-left:18px;background-repeat:no-repeat;vertical-align:middle;}
+.combo-title{display:inline-block;padding:0 2px;margin-left:2px;white-space:nowrap;line-height:16px;font-size:12px;letter-spacing:normal;vertical-align:middle;}
+.combo-group{padding:4px 2px 2px;font-weight:bold;}
+
+.combo-list .checkbox{background-image:url(../icons/checkbox-unchecked.gif);}
+.combo-list .tree-node-checked .checkbox{background-image:url(../icons/checkbox-checked.gif);}
+.combo-list .tree-node-checked-part .checkbox{background-image:url(../icons/checkbox-part.gif);}
+
+/* menu.css */
+.menu{padding:2px;box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);}
+.menu .menu-item{display:block;position:relative;height:16px;padding:4px;overflow:visible;}
+.menu .menu-item-sep{height:5px;margin:0 0 3px 27px;overflow:hidden;font-size:0;}
+.menu-noicon .menu-item-sep{margin-left:0;}
+.menu-item span{display:block;height:16px;overflow:hidden;background-repeat:no-repeat;line-height:18px;_line-height:20px;font-size:12px;}
+.menu-item .menu-icon{padding-left:26px;}
+.menu-item .submenu-tip{padding-right:20px;}
+.menu .menu-item-hover{padding:3px;}
+
+/* spin.css */
+.spin{position:relative;display:inline-block;height:16px;padding:2px;vertical-align:top;}
+.spin{*display:inline;}
+.spinner input{float:left;height:16px;margin-right:2px;line-height:16px;vertical-align:middle;text-align:right;}
+.spin-box{display:block;position:absolute;top:2px;right:2px;width:16px;height:16px;}
+.spin-box .spin-btn{display:block;width:16px;height:8px;overflow:hidden;}
+
+/* slider.css */
+.slider-track{position:relative;overflow:visible;border-radius:4px;}
+.slider-track-x{height:5px;margin:4px 0;}
+.slider-track-y{width:5px;margin:0 4px;}
+.slider-track .slider-scale{position:absolute;top:0;left:0;overflow:hidden;}
+.slider-track-x .slider-scale{height:5px;}
+.slider-track-y .slider-scale{width:5px;}
+.slider-track .slider-handle{position:absolute;overflow:hidden;}
+.slider-track .slider-handle span{display:block;position:absolute;overflow:hidden;}
+.slider-track .slider-handle-x{top:-5px;left:0;width:24px;height:15px;padding:0 3px;}
+.slider-track .slider-handle-x span{}
+.slider-track .slider-handle-x span.left-bar{top:0;left:0;width:3px;height:100%;}
+.slider-track .slider-handle-x span.right-bar{top:0;right:0;width:3px;height:100%;}
+.slider-track .slider-handle-x span.center-bar{position:static;width:100%;height:100%;background-repeat:repeat-x;}
+.slider-track .slider-handle-y{left:-5px;top:0;width:15px;height:24px;padding:3px 0;}
+.slider-track .slider-handle-y span{}
+.slider-track .slider-handle-y span.left-bar{top:0;left:0;width:100%;height:3px;}
+.slider-track .slider-handle-y span.right-bar{bottom:0;left:0;width:100%;height:3px;}
+.slider-track .slider-handle-y span.center-bar{position:static;width:100%;height:100%;background-repeat:repeat-y;}
+.slider-track .handle-x-hover span.center-bar{}
+.slider-track .handle-x-press span.center-bar{}
+.slider-track .handle-y-hover span.center-bar{}
+.slider-track .handle-y-press span.center-bar{}
+.slider-track .slider-handle-x-fix{width:8px;}
+.slider-track .slider-handle-y-fix{height:8px;}
+
+.scrollbar .slider-track{background-color:#eee;overflow:hidden;}
+
+.scrollbar-x .slider-track{height:17px;}
+
+.scrollbar-y .slider-track{width:17px;}
+
+.scrollbar .handle{display:inline-block;position:absolute;top:0;left:0;width:auto;height:15px;margin:1px 17px;overflow:hidden;}
+.scrollbar .handle_b{display:inline-block;width:auto;height:15px;margin-left:3px;overflow:hidden;}
+.scrollbar .handle, .scrollbar .handle_b{*display:inline;}
+.scrollbar .handle_c{height:15px;margin-right:3px;overflow:hidden;}
+.scrollbar .handleHover .handle_c{}
+.scrollbar .handlePress .handle_c{}
+.scrollbar .spinBtn{position:absolute;top:0;width:15px;height:15px;margin:1px;}
+.scrollbar .spinUp{left:0;}
+.scrollbar .spinUpHover{}
+.scrollbar .spinDown{right:0;}
+.scrollbar .spinDownHover{}
+
+.scrollbar_vert{top:0;right:0;left:auto;bottom:auto;width:17px;}
+.scrollbar_vert .spinUp{left:0;}
+.scrollbar_vert .spinUpHover{}
+.scrollbar_vert .spinDown{top:auto;bottom:0;}
+.scrollbar_vert .spinDownHover{}
+.scrollbar_vert .handle{width:15px;height:auto;margin:17px 1px;overflow:hidden;}
+.scrollbar_vert .handle_b{width:15px;height:auto;margin-left:0;margin-top:3px;overflow:hidden;}
+.scrollbar_vert .handle_c{height:auto;margin-right:0;margin-bottom:3px;overflow:hidden;}
+.scrollbar_vert .handleHover .handle_c{}
+.scrollbar_vert .handlePress .handle_c{}
+
+/* accordion.css */
+.accordion .accordion-header{display:block;height:16px;padding:4px;overflow:hidden;line-height:16px;line-height:18px\9;}
+.accordion-header span{display:block;height:16px;overflow:hidden;}
+.accordion-header .icon-left{padding-left:24px;}
+.accordion-header .icon-right{*position:relative;*top:-1px;padding-right:24px;}
+.accordion-header-hover{}
+.accordion-body{}
+.spin-show .scroll-view{margin:10px 0;}
+.accordion .spin-btn{position:absolute;left:0;width:100%;height:10px;overflow:hidden;}
+.accordion .spin-up{top:0;}
+.accordion .spin-down{bottom:0;}
+.accordion .spin-up-hover, .accordion .spin-down-hover{}
+
+/* datepicker.css */
+.datepicker{width:182px;min-height:100px;height:auto !important;height:100px;padding:2px;}
+.datepicker{border-radius:3px;box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);-webkit-box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);-moz-box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);}
+.datepicker .panel-week li{display:inline;float:left;width:20px;padding:3px;line-height:16px;text-align:center;font-weight:bold;}
+.datepicker .panel-day li{display:inline;float:left;width:20px;height:14px;margin:1px;padding:1px;line-height:14px;text-align:right;text-decoration:none;}
+.datepicker .panel-day li.selected{}
+.datepicker .panel-day li.hover{}
+
+.datepicker .datepicker-header{position:relative;z-index:100;height:16px;padding:2px;line-height:16px;font-size:12px;text-align:center;}
+.datepicker  a.dropdown-button{display:inline-block;position:static;width:15px;height:15px;overflow:hidden;cursor:pointer;vertical-align:middle;}
+.datepicker .spin-year, .datepicker .spin-month{position:relative;float:left;height:16px;width:76px;padding:0 2px;white-space:nowrap;}
+.datepicker .label-year, .datepicker .label-month{padding-left:4px;}
+.datepicker .spin-month{width:66px;}
+.datepicker  a.datebtn{position:absolute;top:0;display:block;width:16px;height:16px;cursor:pointer;}
+.datepicker  a.next-year, .datepicker  a.next-month{right:2px;}
+.datepicker  a.prev-year, .datepicker  a.prev-month{left:2px;}
+
+.datepicker .panel-dropdown .panel-dropdown-background{display:block;position:absolute;top:21px;left:-1px;z-index:10;width:182px;height:145px;}
+.datepicker .panel-dropdown .panel-dropdown-content{display:block;position:absolute;top:21px;left:-1px;z-index:11;width:182px;height:137px;padding:4px 0;text-align:center;}
+.datepicker .list-month{position:absolute;top:4px;left:0;width:50%;}
+.datepicker .list-year{position:absolute;top:4px;right:0;width:50%;}
+.datepicker .list-month li, .datepicker .list-year li{display:inline;float:left;width:32%;height:14px;padding:1px;margin:1px 6px;line-height:14px;text-align:center;}
+.datepicker .panel-dropdown a{display:block;}
+.datepicker .list-month li.hover, .datepicker .list-year li.hover{}
+.datepicker .list-month li.selected, .datepicker .list-year li.selected{padding:0px;}
+.datepicker .dToolbar{position:absolute;bottom:0;left:0;height:20px;width:182px;padding:4px 0;text-align:center;}
+.datepicker .dToolbar .btnBox{display:inline-block;width:auto;height:20px;padding-left:10px;}
+.datepicker .dToolbar .btnBox{*display:inline;}
+.datepicker .dToolbar .button{position:static;float:left;padding:0 4px;}
+.datepicker .yearBtnBar{bottom:24px;left:92px;width:90px;}
+.datepicker .yearBtnBar a.yearbtn{display:block;float:left;width:15px;height:15px;margin-right:10px;padding:0;overflow:hidden;cursor:pointer;}
+
+.datepicker .panel-time{height:18px;margin:2px 0;padding:1px 0 1px 1px;overflow:hidden;line-height:16px;}
+.datepicker .panel-time input{float:left;width:36px;width:34px\9;height:16px;padding-right:2px\9;margin-right:0;text-align:right;}
+.datepicker .panel-time span{display:inline-block;float:left;height:18px;padding:0 6px 0 5px;line-height:18px;*line-height:20px;overflow:hidden;vertical-align:middle;}
+.datepicker .panel-time .spin{float:left;width:36px;padding:0;overflow:hidden;}
+.datepicker .panel-time .spin-box{top:0;right:0;width:14px;margin:0;padding:0;}
+
+.datepicker .panel-control{position:relative;height:20px;margin-top:2px;}
+.datepicker .panel-range{position:absolute;left:2px;bottom:1px;width:96px;height:20px;padding-left:6px;}
+.datepicker .panel-range li{display:inline;float:left;width:40px;height:18px;margin-right:6px;cursor:pointer;line-height:18px;text-align:center;}
+.datepicker .panel-range li.selected{padding-top:1px;}
+
+.datepicker .button-ok{float:right;margin:1px 0 0;padding:0px 4px;}
+.datepicker .button-today{float:right;margin:1px 8px 0 0;padding:0px 4px;}
+.datepicker .button{}
+.datepicker .button-hover{}
+
+.date-input{display:inline-block;position:relative;height:20px;overflow:hidden;}
+.date-input input{display:inline-block;height:16px;margin:2px;padding:0;line-height:16px;vertical-align:top;}
+.date-input .icon-date{display:inline-block;width:16px;height:16px;margin:2px 1px 0 0;vertical-align:top;}
+
+/* multiple.css */
+.multipleBox{display:inline-block;width:auto;height:200px;font-size:0;}
+.multiple, .multipleBtnBox{display:inline-block;width:auto;height:100%;vertical-align:middle;}
+.multipleBox, .multiple, .multipleBtnBox{*display:inline;}
+.multipleBtnBox{width:auto;padding:0 10px;text-align:center;}
+.multipleBtnBox .button{display:block;float:none;margin:10px 0;}
+.multiple{width:200px;padding:7px;overflow-x:hidden;overflow-y:scroll;}
+.multiple-item{height:16px;padding:3px 2px;margin-bottom:1px;border-bottom:0;overflow:hidden;font-size:12px;letter-spacing:-1px;}
+.multiple-item span{display:block;height:16px;padding-left:20px;background-repeat:no-repeat;overflow:hidden;vertical-align:top;letter-spacing:normal;line-height:18px;}
+.multiple .hover{padding:2px 1px;}
+.select-touched,.select-selected{}
+.drag-helper .select-selected{padding:2px 1px;}
+.drop-start{}
+.drop-touch{}
+
+/* pager.css */
+.pagerbar{min-height:24px;height:auto !important;height:24px;padding:0;overflow:hidden;line-height:24px;text-align:center;font-size:0;}
+.pager{display:inline-block;width:auto;}
+.pager li{display:inline-block;width:16px;height:24px;margin:0px 3px;font-size:12px;line-height:24px;vertical-align:middle;}
+.pager li, .pager-box{*display:inline;}
+.pager .hover{}
+.pager .page-first{}
+.pager .page-prev{}
+.pager .page-next{}
+.pager .page-last{}
+.pager .page-num{width:auto;padding:1px 10px;}
+.pager .page-size{width:auto;height:24px;padding:0 10px 0 3px;}
+.pager .page-togo{width:auto;height:24px;padding:0 3px 0 10px;}
+.pager label{display:inline-block;height:24px;padding-right:2px;line-height:24px;line-height:26px\9;_line-height:24px;vertical-align:middle;}
+.pager input.text{width:14px;height:14px;margin:-1px 2px 0;padding:1px 2px;font-size:12px;line-height:14px;vertical-align:middle;}
+.pager select{height:18px;font-size:12px;*font-size:10px;vertical-align:middle;margin-top:-2px;*margin-top:0;_margin-top:1px;}
+.pager .refresh{height:16px;margin-left:6px;}
+.pager .refresh-selected{}
+.pagerbar .page-message{display:inline-block;width:auto;vertical-align:middle;font-size:12px;line-height:24px;white-space:nowrap;}
+
+.pager2{height:20px;padding:3px 0;overflow:hidden;text-align:center;font-size:0;}
+.pager2 li{display:inline-block;width:22px;height:18px;margin-right:6px;font-size:12px;line-height:18px;vertical-align:middle;}
+.pager2 li{*display:inline;}
+.pager2 .hover{}
+.pager2 .selected{}
+.pager2 .noborder{border:0 none;}
+.pager2 .page-first, .pager2 .page-prev, .pager2 .page-next, .pager2 .page-last{width:auto;padding:0 5px;}
+
+/* tabs.css */
+.tabs{}
+.tabs-body{}
+.tabs-x .tabs-header-bar{position:relative;height:25px;padding-top:2px;overflow:hidden;}
+.tabs-x .scroll-view{position:relative;height:23px;overflow:hidden;}
+.tabs-x .spin-show .scroll-view{margin:0 18px;}
+.tabs-x .scroll-track{height:23px;white-space:nowrap;}
+.tabs-x .tabs-header{display:inline-block;float:left;height:16px;margin-left:2px;padding:3px 5px 2px;border-top-left-radius:4px;border-top-right-radius:4px;overflow:hidden;line-height:16px;line-height:18px\9;}
+.tabs-x .tabs-header{*display:inline;}
+.tabs-x .tabs-header-hover{background-position:0 -380px;}
+.tabs-x .tabs-header-selected{border-bottom:0 none;padding-bottom:3px;font-weight:bold;}
+.tabs-x .tabs-header span{display:inline-block;height:16px;overflow:hidden;font-size:12px;}
+.tabs-x .tabs-header span span{}
+.tabs-x .tabs-header .icon-left{padding-left:20px;background-repeat:no-repeat;background-position:0 0;}
+.tabs-x .tabs-header .icon-right{padding-right:20px;background-repeat:no-repeat;background-position:right 0;}
+
+.tabs-x .header-foot{height:2px;margin-top:-1px;overflow:hidden;}
+
+.tabs-x .tabs-header-bar .spin-btn{position:absolute;top:2px;z-index:10;width:18px;height:22px;}
+.tabs-x .tabs-header-bar .spin-up{left:0;}
+.tabs-x .tabs-header-bar .spin-up-hover{}
+.tabs-x .tabs-header-bar .spin-down{right:0;}
+.tabs-x .tabs-header-bar .spin-down-hover{}
+
+
+/* tree.css */
+.tree{float:left;padding-left:5px;font-size:0;letter-spacing:-3px;}
+.tree li{display:block;min-height:20px;height:auto !important;height:20px;white-space:nowrap;}
+.tree span{display:inline-block;vertical-align:middle;}
+.tree .tree-node-hitarea{width:16px;height:16px;margin-left:-16px;}
+.subtree{padding-left:17px;}
+.tree .tree-node{display:inline-block;padding:2px 4px 2px 16px;vertical-align:middle;white-space:nowrap;}
+.tree .tree-title{display:inline-block;padding:0 2px;margin-left:2px;white-space:nowrap;line-height:16px;font-size:12px;letter-spacing:normal;}
+.tree .tree-node-hover .tree-title{text-decoration:underline;}
+.tree .tree-node-selected .tree-title{line-height:14px;}
+.tree .checkbox, .tree .tree-icon{height:16px;padding-left:16px;background-repeat:no-repeat;}

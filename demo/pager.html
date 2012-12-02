@@ -1,0 +1,65 @@
+<style type="text/css">
+	
+</style>
+<div class="demo-body">
+	<div style="width:600px;margin:20px 20px 0 0;">
+        <div id="demo-pager01"></div>
+	</div>
+	<div style="width:600px;margin:20px 20px 0 0;">
+        <div id="demo-pager02"></div>
+	</div>
+	<div style="width:600px;margin:20px 20px 0 0;">
+        <div id="demo-pager03"></div>
+	</div>
+	<div style="width:600px;margin:20px 20px 0 0;">
+        <div id="demo-pager04"></div>
+	</div>
+	<div style="width:600px;margin:20px 20px 0 0;">
+        <div id="demo-pager05"></div>
+	</div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        $('#demo-pager01').pager({firstText:'',prevText:'',nextText:'',lastText:''});
+        $('#demo-pager02').pager({
+        	pagerCls:'pager2',
+        	showFirstLast:true,
+        	showPageSize:false,
+        	showCurrTotal:false,
+        	showMessage:false,
+        	startNum:0,
+        	pageNum:0,
+        	endNum:0
+        });
+        $('#demo-pager03').pager({
+        	pagerCls:'pager2',
+        	showFirstLast:true,
+        	showPageSize:false,
+        	showCurrTotal:false,
+        	showMessage:false,
+        	startNum:0,
+        	pageNum:5,
+        	endNum:0
+        });
+        $('#demo-pager04').pager({
+        	pagerCls:'pager2',
+        	showFirstLast:false,
+        	showPageSize:false,
+        	showCurrTotal:false,
+        	showMessage:false,
+        	startNum:0,
+        	pageNum:5,
+        	endNum:2
+        });
+        $('#demo-pager05').pager({
+        	pagerCls:'pager2',
+        	showFirstLast:false,
+        	showPageSize:false,
+        	showCurrTotal:false,
+        	showMessage:false,
+        	startNum:2,
+        	pageNum:5,
+        	endNum:2
+        });
+    });
+</script>
