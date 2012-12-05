@@ -100,7 +100,7 @@ label{display:inline-block;margin:0;padding:0;vertical-align:middle;}
 .panel-header{position:relative;height:16px;padding:4px;-webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;}
 .panel-header span{display:block;}
 .panel-header-icon{position:absolute;top:4px;left:4px;width:16px;height:16px;margin-right:4px;}
-.panel-header-title{height:16px;overflow:hidden;line-height:16px;line-height:18px\9;font-size:12px;font-weight:bold;}
+.panel-header-title{position:relative;height:16px;overflow:hidden;line-height:16px;line-height:18px\9;font-size:12px;font-weight:bold;}
 .panel-header .tool-box{position:absolute;top:4px;right:4px;height:15px;margin:1px 0 0 4px;overflow:hidden;}
 .header-tool{display:inline-block;width:15px;height:15px;margin-left:2px;overflow:hidden;}
 .header-tool{*display:inline;}
@@ -121,14 +121,14 @@ label{display:inline-block;margin:0;padding:0;vertical-align:middle;}
 .comboBox input{height:16px;margin:0;padding:0;line-height:18px;font-size:12px;vertical-align:middle;}
 
 .combo-dropdown{display:none;position:absolute;top:20px;left:-1px;overflow:auto;box-shadow:2px 2px 4px 0px rgba(0, 0, 0, 0.5);}
-.combo-item{display:block;cursor:pointer;padding:4px 2px;overflow:hidden;vertical-align:middle;white-space:nowrap;}
+.combo-item{display:block;padding:4px 2px;overflow:hidden;cursor:pointer;vertical-align:middle;white-space:nowrap;}
 .combo-item-selected{}
 .combo-item-hover{}
 .combo-list{font-size:0;letter-spacing:-3px;}
 .combo-list ul li .combo-item{padding-left:20px;}
 .combo-list .checkbox, .combo-list .combo-icon{display:inline-block;height:16px;padding-left:18px;background-repeat:no-repeat;vertical-align:middle;}
 .combo-title{display:inline-block;padding:0 2px;margin-left:2px;white-space:nowrap;line-height:16px;font-size:12px;letter-spacing:normal;vertical-align:middle;}
-.combo-group{padding:4px 2px 2px;font-weight:bold;}
+.optGroup{padding:4px 2px 2px;}
 
 .combo-list .checkbox{background-image:url(../icons/checkbox-unchecked.gif);}
 .combo-list .tree-node-checked .checkbox{background-image:url(../icons/checkbox-checked.gif);}
@@ -273,10 +273,10 @@ label{display:inline-block;margin:0;padding:0;vertical-align:middle;}
 
 /* multiple.css */
 .multipleBox{display:inline-block;width:auto;height:200px;font-size:0;}
-.multiple, .multipleBtnBox{display:inline-block;width:auto;height:100%;vertical-align:middle;}
+.multiple, .multipleBtnBox{display:inline-block;width:60px;height:100%;vertical-align:middle;}
 .multipleBox, .multiple, .multipleBtnBox{*display:inline;}
 .multipleBtnBox{width:auto;padding:0 10px;text-align:center;}
-.multipleBtnBox .button{display:block;float:none;margin:10px 0;}
+.multipleBtnBox .button{float:none;margin:6px 0;}
 .multiple{width:200px;padding:7px;overflow-x:hidden;overflow-y:scroll;}
 .multiple-item{height:16px;padding:3px 2px;margin-bottom:1px;border-bottom:0;overflow:hidden;font-size:12px;letter-spacing:-1px;}
 .multiple-item span{display:block;height:16px;padding-left:20px;background-repeat:no-repeat;overflow:hidden;vertical-align:top;letter-spacing:normal;line-height:18px;}
