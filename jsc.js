@@ -254,26 +254,27 @@
 		plugin:function(name,plugin){
 			$.fn[name]=function(conf){
 				if(!this.length){return this;}
-				plugin.methods=plugin.methods||{};
-				plugin.methods.option=plugin.methods.option||function(prop,val){
-					return $$._option.call(this,this.data(name),prop,val);
-				};
-				var destroy=plugin.methods.destroy||$$.fn;
-				plugin.methods.destroy=function(){
-					this.each(function(){
-						var $this=$(this),sign=$this.attr('jscplugin'),opt=$this.data(name);
-						destroy.call($this);
-						if(opt){
-							opt.timer&&opt.timer.stop&&opt.timer.stop();
-							$this.off('.'+name);
-							$this.removeData(name);
-						}
-						sign=sign.replace(name,'');
-						$this.attr('jscplugin',$.trim(sign));
-					});
-				};
 				if($$.is('!emptyStr',conf)){
-					return (method=plugin.methods[conf])?method.apply(this,Array.prototype.slice.call(arguments,1)):this;
+					var methods=plugin.methods||{};
+					if(conf==='option'){
+						var method=methods.option||$$._option;
+						Array.prototype.splice.call(arguments,0,1,this.data(name));
+						return method.apply(this,arguments);
+					}else if(conf==='destroy'){
+						return this.each(function(){
+							var $this=$(this),sign=$this.attr('jscplugin'),opt=$this.data(name);
+							methods.destroy&&methods.destroy.call($this);
+							if(opt){
+								opt.timer&&opt.timer.stop&&opt.timer.stop();
+								$this.off('.'+name);
+								$this.removeData(name);
+							}
+							sign=sign.replace(name,'');
+							$this.attr('jscplugin',$.trim(sign));							
+						});
+					}else{
+						return (method=plugin.methods[conf])?method.apply(this,Array.prototype.slice.call(arguments,1)):this;						
+					}
 				}
 				if(opt=this.data(name)){
 					if(plugin.exist!==undefined){
@@ -284,7 +285,7 @@
 						return this.data(name,$.extend(true,{},opt,conf));
 					}
 				}
-				this.attr('jscplugin',(this.attr('jscplugin')||'')+' '+name);
+				this.attr('jscplugin',name+' '+(this.attr('jscplugin')||''));
 				return this.each(function(){plugin.create.call($(this),$.extend(true,{},plugin.conf,conf));});
 			}
 		}
@@ -979,8 +980,8 @@
 		},
 		exist:true,
 		methods:{
-			option:function(type,prop,val){
-				var opts=this.data('draggable'),res=opts||this;
+			option:function(opts,type,prop,val){
+				var res=opts||this;
 				opts&&type&&(res=$$._option.call(this,opts[type],prop,val));
 				return res;
 			}
@@ -1372,7 +1373,8 @@
 		},
 		methods:{
 			destroy:function(){
-				dropManager=$.grep(dropManager,function(n,i){return n!=this;});
+				var me=this;
+				dropManager=$.grep(dropManager,function(n,i){return n[0]!=me[0];});
 				!dropManager.length&&$$.$doc.off('.drag');
 			}
 		},
@@ -1395,6 +1397,8 @@
 								}
 								opt.target=$$.is('!emptyStr',opt.selector)?dropper.find(opt.selector):null;
 								$.isFunction(opt.onStart)&&opt.onStart.apply(dropper,arguments);
+							}else{
+								opt.dropping=false;
 							}
 							break;
 							case 'dragging':
@@ -1842,8 +1846,8 @@
 		},
 		exist:true,
 		methods:{
-			option:function(index,prop,val){
-				var opts=this.data('button'),res=opts||this;
+			option:function(opts,index,prop,val){
+				var res=opts||this;
 				if(opts&&arguments.length){
 					!$.isNumeric(index)&&(val=prop,prop=index,index=0);					
 					opts[index]&&(res=$$._option.call(this,opts[index],prop,val));
@@ -2059,7 +2063,7 @@
 			},
 			go:function(arg){
 				var opt=this.data('spin');
-				opt.keep?opt.arrow[arg].trigger(opt.event+'.button'):this.spin('one',arg);
+				opt&&(opt.keep?opt.arrow[arg].trigger(opt.event+'.button'):this.spin('one',arg));
 				return this;
 			},
 			end:function(){
@@ -2106,6 +2110,9 @@
 	});
 	function _spinAction(jsc){
 		var opt=this.data('spin');
+		if(!opt){
+			return false;
+		}
 		opt.core.value+=jsc.param*opt.core.step;
 		var res=_spinUpdate.call(this);
 		jsc.plugin=this;

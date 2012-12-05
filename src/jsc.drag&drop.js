@@ -23,8 +23,8 @@
 		},
 		exist:true,
 		methods:{
-			option:function(type,prop,val){
-				var opts=this.data('draggable'),res=opts||this;
+			option:function(opts,type,prop,val){
+				var res=opts||this;
 				opts&&type&&(res=$$._option.call(this,opts[type],prop,val));
 				return res;
 			}
@@ -419,7 +419,8 @@
 		},
 		methods:{
 			destroy:function(){
-				dropManager=$.grep(dropManager,function(n,i){return n!=this;});
+				var me=this;
+				dropManager=$.grep(dropManager,function(n,i){return n[0]!=me[0];});
 				!dropManager.length&&$$.$doc.off('.drag');
 			}
 		},
@@ -442,6 +443,8 @@
 								}
 								opt.target=$$.is('!emptyStr',opt.selector)?dropper.find(opt.selector):null;
 								$.isFunction(opt.onStart)&&opt.onStart.apply(dropper,arguments);
+							}else{
+								opt.dropping=false;
 							}
 							break;
 							case 'dragging':

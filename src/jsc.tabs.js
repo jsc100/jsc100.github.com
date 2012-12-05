@@ -259,7 +259,7 @@
 				name=$$.str2Arr(name);
 				$$.each(name,function(i,n){
 					var plugin=$.trim(n);
-					$$.is('!emptyStr',plugin)&&$this[plugin]('des');
+					$$.is('!emptyStr',plugin)&&$this[plugin]('destroy');
 				});
 			});
 			hb.remove();

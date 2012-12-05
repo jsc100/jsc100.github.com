@@ -78,7 +78,7 @@
 			jsc.button.children('.select-selected').removeClass('select-selected');
 		}
 	}).draggable({type:'drag',proxy:false,keepPos:false,container:'#test',selector:'.select-selected',target:'.select-selected'});
-	$('.multiple').droppable({placeholder:true});
+	$('.multiple').droppable({accept:'.multiple-item',placeholder:true});
 	
 	$('#move-right').button({iconCls:'icon-right',icon:'icon-move-right',text:'选择',click:function(){
 		$(mul[0]).find('.select-selected').appendTo(mul[1]);

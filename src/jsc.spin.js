@@ -48,7 +48,7 @@
 			},
 			go:function(arg){
 				var opt=this.data('spin');
-				opt.keep?opt.arrow[arg].trigger(opt.event+'.button'):this.spin('one',arg);
+				opt&&(opt.keep?opt.arrow[arg].trigger(opt.event+'.button'):this.spin('one',arg));
 				return this;
 			},
 			end:function(){
@@ -95,6 +95,9 @@
 	});
 	function _spinAction(jsc){
 		var opt=this.data('spin');
+		if(!opt){
+			return false;
+		}
 		opt.core.value+=jsc.param*opt.core.step;
 		var res=_spinUpdate.call(this);
 		jsc.plugin=this;

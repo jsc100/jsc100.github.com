@@ -38,8 +38,8 @@
 		},
 		exist:true,
 		methods:{
-			option:function(index,prop,val){
-				var opts=this.data('button'),res=opts||this;
+			option:function(opts,index,prop,val){
+				var res=opts||this;
 				if(opts&&arguments.length){
 					!$.isNumeric(index)&&(val=prop,prop=index,index=0);					
 					opts[index]&&(res=$$._option.call(this,opts[index],prop,val));

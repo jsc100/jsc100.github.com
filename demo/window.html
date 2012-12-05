@@ -19,7 +19,7 @@
 			panelOpt:{bars:[{pos:'top',cls:'menuBar toolbar'},{pos:'top',cls:'tools toolbar'}]},
 			ajaxContent:{}
 		});
-		win.find('.panel-body').layout({axis:'x'});
+		win.find('.panel-body').css('overflow','hidden').layout({axis:'x'});
 		var btns=[{group:'group1',text:'文件',opt:{}},
 				{group:'group1',text:'编辑',opt:{}},
 				{group:'group1',text:'工具',opt:{}},

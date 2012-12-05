@@ -254,26 +254,27 @@
 		plugin:function(name,plugin){
 			$.fn[name]=function(conf){
 				if(!this.length){return this;}
-				plugin.methods=plugin.methods||{};
-				plugin.methods.option=plugin.methods.option||function(prop,val){
-					return $$._option.call(this,this.data(name),prop,val);
-				};
-				var destroy=plugin.methods.destroy||$$.fn;
-				plugin.methods.destroy=function(){
-					this.each(function(){
-						var $this=$(this),sign=$this.attr('jscplugin'),opt=$this.data(name);
-						destroy.call($this);
-						if(opt){
-							opt.timer&&opt.timer.stop&&opt.timer.stop();
-							$this.off('.'+name);
-							$this.removeData(name);
-						}
-						sign=sign.replace(name,'');
-						$this.attr('jscplugin',$.trim(sign));
-					});
-				};
 				if($$.is('!emptyStr',conf)){
-					return (method=plugin.methods[conf])?method.apply(this,Array.prototype.slice.call(arguments,1)):this;
+					var methods=plugin.methods||{};
+					if(conf==='option'){
+						var method=methods.option||$$._option;
+						Array.prototype.splice.call(arguments,0,1,this.data(name));
+						return method.apply(this,arguments);
+					}else if(conf==='destroy'){
+						return this.each(function(){
+							var $this=$(this),sign=$this.attr('jscplugin'),opt=$this.data(name);
+							methods.destroy&&methods.destroy.call($this);
+							if(opt){
+								opt.timer&&opt.timer.stop&&opt.timer.stop();
+								$this.off('.'+name);
+								$this.removeData(name);
+							}
+							sign=sign.replace(name,'');
+							$this.attr('jscplugin',$.trim(sign));							
+						});
+					}else{
+						return (method=plugin.methods[conf])?method.apply(this,Array.prototype.slice.call(arguments,1)):this;						
+					}
 				}
 				if(opt=this.data(name)){
 					if(plugin.exist!==undefined){
@@ -284,7 +285,7 @@
 						return this.data(name,$.extend(true,{},opt,conf));
 					}
 				}
-				this.attr('jscplugin',(this.attr('jscplugin')||'')+' '+name);
+				this.attr('jscplugin',name+' '+(this.attr('jscplugin')||''));
 				return this.each(function(){plugin.create.call($(this),$.extend(true,{},plugin.conf,conf));});
 			}
 		}

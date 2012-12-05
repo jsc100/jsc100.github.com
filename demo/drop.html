@@ -1,7 +1,7 @@
 <style type="text/css">
 	.demo-drop-box{position:relative;display:inline-block;width:auto;margin:20px 50px 20px 0;vertical-align:middle;width:500px;height:300px;border:1px dashed #ccf;background:#efefef;}
 	.demo-drop-box{*display:inline;}
-	.demo-drop-drag{z-index:1;border:1px solid #89b;background:#bce;width:80px;height:80px;margin-left:10px;font-size:22px;font-weight:bold;line-height:80px;text-align:center;}
+	.demo-drop-drag{position:relative;z-index:1;border:1px solid #89b;background:#bce;width:80px;height:80px;margin-left:10px;font-size:22px;font-weight:bold;line-height:80px;text-align:center;}
 	.demo-drop-container{position:absolute;right:20px;bottom:20px;width:200px;height:200px;border:1px dashed #ccc;background-color:#fff;font-size:14px;color:#aaa;line-height:120px;text-align:center;}
 	.demo-drop-container-selected{border:1px dashed #b89;background-color:#ebc;}
 	.demo-drop-container-touched{border:1px dashed #9b8;background-color:#ceb;}
@@ -25,5 +25,5 @@
 <script type="text/javascript">
 	$('#drop-drag01').draggable({type:'drag',proxy:false,container:function(){return $('#drop-drag01').parent().getPos();}});
 	$('#drop-drag02').draggable({type:'drag',proxy:false,container:function(){return $('#drop-drag02').parent().getPos();}});
-	$('.demo-drop-container').droppable({dropTouchCls:'demo-drop-container-touched',droppedCls:'demo-drop-container-selected'});
+	$('.demo-drop-container').droppable({accept:'.demo-drop-drag',dropTouchCls:'demo-drop-container-touched',droppedCls:'demo-drop-container-selected'});
 </script>
