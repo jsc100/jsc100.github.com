@@ -128,7 +128,7 @@ label{display:inline-block;margin:0;padding:0;vertical-align:middle;}
 .combo-list ul li .combo-item{padding-left:20px;}
 .combo-list .checkbox, .combo-list .combo-icon{display:inline-block;height:16px;padding-left:18px;background-repeat:no-repeat;vertical-align:middle;}
 .combo-title{display:inline-block;padding:0 2px;margin-left:2px;white-space:nowrap;line-height:16px;font-size:12px;letter-spacing:normal;vertical-align:middle;}
-.optGroup{padding:4px 2px 2px;}
+.combo-group{padding:4px 2px 2px;font-weight:bold;}
 
 .combo-list .checkbox{background-image:url(../icons/checkbox-unchecked.gif);}
 .combo-list .tree-node-checked .checkbox{background-image:url(../icons/checkbox-checked.gif);}
