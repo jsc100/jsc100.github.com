@@ -273,9 +273,9 @@ label{display:inline-block;margin:0;padding:0;vertical-align:middle;}
 
 /* multiple.css */
 .multipleBox{display:inline-block;width:auto;height:200px;font-size:0;}
-.multiple, .multipleBtnBox{display:inline-block;width:auto;height:100%;vertical-align:middle;}
+.multiple, .multipleBtnBox{display:inline-block;width:60px;height:100%;vertical-align:middle;}
 .multipleBox, .multiple, .multipleBtnBox{*display:inline;}
-.multipleBtnBox{width:60px;padding:0 10px;text-align:center;}
+.multipleBtnBox{width:auto;padding:0 10px;text-align:center;}
 .multipleBtnBox .button{float:none;margin:6px 0;}
 .multiple{width:200px;padding:7px;overflow-x:hidden;overflow-y:scroll;}
 .multiple-item{height:16px;padding:3px 2px;margin-bottom:1px;border-bottom:0;overflow:hidden;font-size:12px;letter-spacing:-1px;}
