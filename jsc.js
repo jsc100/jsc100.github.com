@@ -3695,7 +3695,8 @@
 			btns:[{group:'ddCtrl',text:'\u786E\u5B9A',opt:{param:1}},{group:'ddCtrl',text:'\u53D6\u6D88',opt:{param:0}}],
 			click:function(jsc){
 				if(jsc.param){
-					date.curr.setFullYear(parseInt(list.year.children('.selected').text()));
+					var y=$$.parseInt(list.year.children('.selected').text());
+					y&&date.curr.setFullYear(y);
 					date.curr.setMonth(parseInt(list.month.children('.selected').text())-1);
 					update();
 				}
